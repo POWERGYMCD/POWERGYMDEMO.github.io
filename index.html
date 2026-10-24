@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Power Gym Chuadanga | Gym, Coaches and Women's Session</title>
+<meta name="description" content="Power Gym in Boro Bazar, Chuadanga: strength and cardio floor, expert coaches, a women's session and clear membership plans. Open Saturday to Thursday, 6 AM to 11 PM.">
+<meta name="theme-color" content="#05070c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23b91c1c'/%3E%3Cpath d='M22 50h56M30 34v32M70 34v32M38 28v44M62 28v44' stroke='%23fff' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Power Gym Chuadanga","telephone":"+8801707248891","address":{"@type":"PostalAddress","streetAddress":"Boro Bazar, Chuadanga Sadar","addressLocality":"Chuadanga","addressRegion":"Khulna Division","addressCountry":"BD"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"06:00","closes":"23:00"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:root{
+  --ink:#05070c;
+  --glow:#ef4444;
+  --glow-rgb:239,68,68;
+  --deep:#991b1b;
+  --warm:#e8b4a0;
+  --line:rgba(255,255,255,.14);
+  --line-strong:rgba(255,255,255,.24);
+  --glass-bg:rgba(18,6,8, 0.45);
+  --glass-card:rgba(255, 255, 255, 0.035);
+  --glass-hover:rgba(255, 255, 255, 0.08);
+  --blur-std:blur(24px) saturate(1.4);
+  --blur-nav:blur(24px) saturate(1.8);
+  --mute:rgba(255,255,255,.68);
+  --pad:clamp(16px,4vw,64px);
+  --radius-lg:28px;
+  --radius-md:18px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{font:400 15px/1.6 Manrope,system-ui,sans-serif;color:#fff;overflow-x:hidden;background-color:var(--ink)}
+body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{position:relative;max-width:1480px;margin-inline:auto;padding-inline:var(--pad)}
+
+/* Navigation */
+.nav-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;padding:20px var(--pad);
+  transition:padding .4s cubic-bezier(.16,1,.3,1), background-color .4s cubic-bezier(.16,1,.3,1), border-color .4s, box-shadow .4s;
+}
+.nav-header.scrolled{
+  padding:12px var(--pad);
+  background:rgba(5,7,12, 0.75);
+  backdrop-filter:var(--blur-nav);
+  -webkit-backdrop-filter:var(--blur-nav);
+  border-bottom:1px solid rgba(255,255,255,.1);
+  box-shadow:0 16px 40px rgba(0,0,0,.7), 0 0 30px rgba(239,68,68,.05);
+}
+.nav-container{max-width:1480px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo-brand{
+  display:inline-flex;align-items:center;gap:8px;font:800 25px/1 'Anton',sans-serif;letter-spacing:.04em;
+  background:linear-gradient(135deg, #ffffff 0%, #d1d5db 50%, #ef4444 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 25px rgba(239,68,68,.25);transition:transform .3s ease, filter .3s ease;z-index:102;
+}
+.logo-brand:hover{transform:scale(1.02);filter:drop-shadow(0 0 12px rgba(239,68,68,.4))}
+.logo-badge{font:700 9px/1 'Manrope',sans-serif;letter-spacing:.1em;padding:3px 7px;border-radius:99px;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.4);color:var(--glow);text-transform:uppercase}
+
+.nav-pill-wrapper{
+  display:flex;align-items:center;padding:4px;border-radius:99px;
+  background:rgba(255,255,255,.04);backdrop-filter:blur(20px) saturate(1.8);
+  -webkit-backdrop-filter:blur(20px) saturate(1.8);border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 12px 32px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.2);transition:all .3s ease;
+}
+.nav-header.scrolled .nav-pill-wrapper{background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.08)}
+.nav-links-desktop{display:flex;align-items:center;list-style:none;margin:0;padding:0;gap:2px}
+.nav-links-desktop a{
+  position:relative;display:inline-block;padding:8px 16px;border-radius:99px;font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);
+  transition:color .25s ease, background-color .25s ease, text-shadow .25s ease;
+}
+.nav-links-desktop a:hover,
+.nav-links-desktop a.active{color:#fff;background:rgba(255,255,255,.12);text-shadow:0 0 12px rgba(255,255,255,.6)}
+.nav-links-desktop a::after{
+  content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%) scaleX(0);width:12px;height:2px;
+  background:var(--glow);border-radius:2px;transition:transform .25s ease;box-shadow:0 0 8px var(--glow);
+}
+.nav-links-desktop a:hover::after,
+.nav-links-desktop a.active::after{transform:translateX(-50%) scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:12px;z-index:102}
+
+.nav-toggle-btn{
+  display:none;position:relative;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;transition:all .3s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.2);
+}
+.nav-toggle-btn:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);transform:scale(1.05)}
+.nav-toggle-btn span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;transition:all .35s cubic-bezier(.16,1,.3,1);transform-origin:center}
+.nav-toggle-btn.is-active{background:rgba(255,255,255,.15);border-color:var(--glow);box-shadow:0 0 20px rgba(239,68,68,.3)}
+.nav-toggle-btn.is-active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle-btn.is-active span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-toggle-btn.is-active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-nav-drawer{
+  position:fixed;inset:0;z-index:99;background:rgba(5,7,12, 0.94);
+  backdrop-filter:blur(32px) saturate(2);-webkit-backdrop-filter:blur(32px) saturate(2);
+  display:flex;flex-direction:column;justify-content:space-between;padding:100px var(--pad) 36px;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-12px) scale(.98);
+  transition:all .4s cubic-bezier(.16,1,.3,1);overflow-y:auto;
+}
+.mobile-nav-drawer.is-open{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0) scale(1)}
+.mobile-nav-links{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:12px}
+.mobile-nav-links li{opacity:0;transform:translateY(20px);transition:all .35s cubic-bezier(.16,1,.3,1)}
+.mobile-nav-drawer.is-open .mobile-nav-links li{opacity:1;transform:translateY(0)}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(1){transition-delay:.05s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(2){transition-delay:.1s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(3){transition-delay:.15s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(4){transition-delay:.2s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(5){transition-delay:.25s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(6){transition-delay:.3s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(7){transition-delay:.35s}
+.mobile-nav-drawer.is-open .mobile-nav-links li:nth-child(8){transition-delay:.4s}
+
+.mobile-nav-links a{
+  display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-radius:18px;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+  font:700 18px/1 'Manrope',sans-serif;letter-spacing:.02em;color:rgba(255,255,255,.9);transition:all .25s ease;
+}
+.mobile-nav-links a span{font-size:12px;font-weight:600;color:var(--glow);letter-spacing:.1em}
+.mobile-nav-links a:hover,.mobile-nav-links a:active{
+  background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff;transform:translateX(4px);
+}
+.mobile-drawer-footer{display:flex;flex-direction:column;gap:16px;padding-top:24px;border-top:1px solid var(--line)}
+.mobile-info-chips{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--mute)}
+.mobile-info-chips div{display:flex;align-items:center;gap:6px}
+.mobile-info-chips .dot{width:8px;height:8px}
+
+@media(max-width:1080px){.nav-pill-wrapper{display:none}.nav-toggle-btn{display:flex}.mobile-nav-drawer{display:flex}}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:6px 20px 6px 6px;border-radius:99px;
+  background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--line-strong);font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.2);transition:all .25s ease;cursor:pointer;
+}
+.btn i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:#07090d;font:700 15px/1 Manrope;transition:transform .25s, background-color .25s}
+.btn:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);box-shadow:0 12px 35px rgba(239,68,68,.25), inset 0 1px 0 rgba(255,255,255,.4)}
+.btn:hover i{transform:translateX(3px);background:var(--glow)}
+.btn.w{background:#fff;color:#07090d;border-color:#fff;box-shadow:0 10px 30px rgba(255,255,255,.2)}
+.btn.w i{background:#07090d;color:#fff}
+.btn.w:hover{background:#fee2e2;box-shadow:0 12px 40px rgba(255,255,255,.4)}
+
+.mark{font:400 clamp(7rem,25vw,22rem)/.78 Anton,sans-serif;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.8))}
+
+/* Hero */
+.hero{
+  position:relative;min-height:max(100svh,780px);display:flex;flex-direction:column;
+  padding:clamp(100px,15vh,150px) var(--pad) 36px;overflow:hidden;
+  background:radial-gradient(ellipse 50% 40% at 50% 30%,rgba(153,27,27,.35),transparent 75%),radial-gradient(ellipse 60% 50% at 100% 10%,rgba(232,180,160,.2),transparent 70%),radial-gradient(ellipse 60% 50% at 0% 80%,rgba(239,68,68,.2),transparent 70%),var(--ink);
+}
+.hero>*{position:relative;z-index:3}
+.hero .mark{z-index:1;animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+
+.glass{
+  width:min(100%,720px);min-height:190px;margin:clamp(24px,5vh,48px) auto 0;padding:26px;display:flex;flex-direction:column;gap:16px;
+  border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(127,29,29,.15) 50%,rgba(10,4,6,.65));
+  backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std);border:1px solid var(--line-strong);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 30px 80px rgba(0,0,0,.6),0 0 40px rgba(239,68,68,.15);animation:rise 1s .35s cubic-bezier(.2,.7,.2,1) both;
+}
+.glass label{font-size:14px;font-weight:600;color:rgba(255,255,255,.95);letter-spacing:.02em}
+.glass input{background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:12px;color:#fff;font:inherit;font-size:16px;padding:12px 16px;outline:0;transition:all .25s}
+.glass input::placeholder{color:rgba(255,255,255,.45)}
+.glass input:focus{border-color:var(--glow);background:rgba(0,0,0,.35);box-shadow:0 0 15px rgba(239,68,68,.3)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding-right:56px;margin-top:auto}
+.chips button{font:600 12px Manrope,sans-serif;padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:rgba(255,255,255,.8);cursor:pointer;backdrop-filter:blur(10px);transition:all .2s}
+.chips button:hover{background:rgba(255,255,255,.12);color:#fff}
+.chips .on{background:#fff;color:#07090d;border-color:#fff;box-shadow:0 0 20px rgba(255,255,255,.4)}
+.go{position:absolute;right:22px;bottom:22px;width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:#07090d;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 0 20px rgba(255,255,255,.3);transition:transform .2s, background-color .2s}
+.go:hover{transform:scale(1.08);background:var(--glow)}
+
+.row{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:clamp(28px,6vh,60px);animation:rise 1s .55s cubic-bezier(.2,.7,.2,1) both}
+.row p{max-width:460px;font-size:14px;color:var(--mute);background:rgba(255,255,255,.03);padding:12px 20px;border-radius:16px;border:1px solid var(--line);backdrop-filter:blur(12px)}
+.dn{font-size:22px;width:42px;height:42px;display:inline-grid;place-items:center}
+@keyframes rise{from{opacity:0;transform:translateY(36px)}}
+
+section{position:relative;padding-top:clamp(80px,11vw,140px);padding-bottom:20px}
+.beam::before{content:"";position:absolute;top:-50px;left:50%;width:min(800px,95vw);height:500px;transform:translateX(-50%);background:radial-gradient(ellipse 50% 80% at 50% 0,rgba(239,68,68,.25),rgba(153,27,27,.12) 50%,transparent 75%);pointer-events:none}
+.tag{font-size:12px;font-weight:700;letter-spacing:.25em;color:var(--glow);margin-bottom:12px;text-shadow:0 0 12px rgba(239,68,68,.4)}
+h2{font:300 clamp(2.2rem,4.6vw,3.6rem)/1.1 Manrope,sans-serif;letter-spacing:-.02em;text-shadow:0 10px 30px rgba(0,0,0,.5)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,60px)}
+.note{max-width:36ch;font-size:13px;color:var(--mute)}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px}
+.card{
+  position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:32px 28px;min-height:330px;
+  border-radius:var(--radius-lg);background:linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std);border:1px solid var(--line);
+  box-shadow:0 30px 60px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.1);transition:all .35s cubic-bezier(.16,1,.3,1);
+}
+.card:hover{
+  transform:translateY(-6px);background:linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  border-color:var(--line-strong);box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 30px rgba(239,68,68,.15), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.card h3{font:400 24px/1.2 Manrope,sans-serif;letter-spacing:-.01em}
+.card p{max-width:36ch;font-size:13px;color:var(--mute);line-height:1.6}
+.card .btn{margin-top:auto}
+
+.vis{align-self:stretch;height:140px;display:grid;place-items:center;margin-top:auto}
+.vis::before{content:"";width:120px;height:120px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.v1::before{clip-path:polygon(25% 4%,75% 4%,100% 50%,75% 96%,25% 96%,0 50%);background:linear-gradient(180deg,#c7ccd4,#1a0608 72%)}
+.v2::before{border-radius:50%;background:conic-gradient(from 210deg,var(--glow),var(--deep) 30%,transparent 30%);-webkit-mask:radial-gradient(circle,transparent 46%,#000 47%);mask:radial-gradient(circle,transparent 46%,#000 47%)}
+.v3::before{border-radius:50%;background:repeating-radial-gradient(circle,rgba(255,255,255,.6) 0 1px,transparent 1px 14px);-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%)}
+.vis+.btn{margin-top:0}
+
+.time{font:400 clamp(2rem,3.4vw,2.8rem)/1 Anton,sans-serif;letter-spacing:.02em;color:var(--glow);text-shadow:0 0 15px rgba(239,68,68,.3)}
+.when{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.price{font:300 clamp(2.2rem,3.6vw,3rem)/1 Manrope,sans-serif!important;letter-spacing:-.03em}
+.card small{margin-top:-8px;font-size:12px;color:var(--mute)}
+.card ul{list-style:none;display:grid;gap:8px;font-size:13px;color:rgba(255,255,255,.84)}
+.card li::before{content:"+";margin-right:8px;color:var(--glow);font-weight:bold}
+.chip{position:absolute;top:22px;right:22px;padding:4px 12px;border-radius:99px;background:#fff;color:#07090d;font-size:11px;font-weight:700;box-shadow:0 0 15px rgba(255,255,255,.4)}
+
+.coach{
+  display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:clamp(22px,4vw,48px);align-items:center;max-width:880px;margin-inline:auto;
+  padding:clamp(24px,4vw,36px);border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  border:1px solid var(--line-strong);box-shadow:0 40px 90px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.2);backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std)
+}
+.ph{position:relative;aspect-ratio:1;border-radius:20px;overflow:hidden;background:radial-gradient(circle at 50% 30%,var(--deep),#12060a);border:1px solid var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.ph .bd{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);padding:7px 22px;border-radius:99px;background:linear-gradient(90deg,var(--deep),var(--glow));font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;box-shadow:0 8px 24px rgba(153,27,27,.6)}
+.coach h3{font:400 clamp(2rem,3.4vw,2.8rem)/1 Anton,sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.coach .role{margin:8px 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--glow)}
+.coach p{max-width:44ch;font-size:14px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.tags span{padding:7px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:12px;font-weight:600;backdrop-filter:blur(8px)}
+@media(max-width:640px){.coach{grid-template-columns:1fr}.ph{max-width:320px}}
+
+.cta{
+  display:flex;flex-direction:column;align-items:center;gap:16px;padding:clamp(40px,6vw,72px) 24px;border-radius:var(--radius-lg);text-align:center;
+  border:1px solid var(--line-strong);box-shadow:0 40px 100px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.2);
+  backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std);background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(239,68,68,.25),transparent 75%),linear-gradient(180deg,rgba(255,255,255,.05),rgba(12,4,6,.8))
+}
+.cta .mark{font-size:clamp(5rem,15vw,11rem)}
+.cta h2{font-weight:400;font-size:clamp(1.6rem,2.8vw,2.2rem);margin-top:8px}
+.cta p{max-width:52ch;margin-bottom:10px;color:var(--mute)}
+
+.foot{position:relative;overflow:hidden;margin-top:clamp(80px,10vw,140px);padding-top:40px;background:radial-gradient(ellipse 60% 42% at 50% 100%,rgba(239,68,68,.2),transparent 78%),linear-gradient(180deg,var(--ink),#020306);border-top:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding-top:20px}
+.fg>div{display:flex;flex-direction:column;gap:8px;padding:20px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--glass-card);backdrop-filter:var(--blur-std);font-size:13px;color:var(--mute)}
+.fg h4{font:700 12px Manrope,sans-serif;color:#fff;letter-spacing:.05em;text-transform:uppercase}
+.fg h4::before{content:"▪ ";color:var(--glow)}
+.fg a:hover{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.5)}
+.copy{display:block;margin-top:36px;font-size:12px;color:var(--mute);text-align:center}
+.foot .mark{margin:48px 0 -.05em;font-size:clamp(7rem,28vw,24rem);line-height:.74;opacity:.5}
+
+@media(max-width:860px){.row{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,::before{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+section.tight{padding-top:clamp(28px,4vw,48px)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px 20px;flex-wrap:wrap;padding:16px 26px;margin-bottom:16px;border-radius:99px;background:rgba(255,255,255,.04);border:1px solid var(--line);backdrop-filter:var(--blur-std);box-shadow:0 10px 30px rgba(0,0,0,.3);font-size:13px;font-weight:600}
+.bar span{display:flex;align-items:center;gap:10px}.bar em{font-style:normal;color:var(--warm)}
+.dot{width:9px;height:9px;border-radius:50%;background:#6b7280}
+.open .dot{background:#35d07f;box-shadow:0 0 10px #35d07f;animation:ping 2s infinite}
+@keyframes ping{from{box-shadow:0 0 0 0 rgba(53,208,127,.8)}to{box-shadow:0 0 0 10px transparent}}
+
+.t .card,.s .card{min-height:0}.t .card{gap:6px;padding:24px 26px}.t b{font-size:17px;color:#fff}
+.s .card{align-items:center;text-align:center;gap:6px;padding:36px 20px}.s b{font-size:13px}
+.n{font:400 clamp(3rem,5vw,4.4rem)/1 Anton,sans-serif}.n i{font-style:normal;color:var(--glow);text-shadow:0 0 15px rgba(239,68,68,.4)}
+.c3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.c3 .card{min-height:190px}
+
+/* Why Section */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 360px), 1fr));gap:24px}
+.why-card{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:36px 32px;
+  border-radius:var(--radius-lg);background:linear-gradient(150deg, rgba(255, 255, 255, 0.06) 0%, rgba(153,27,27, 0.05) 50%, rgba(5,7,12, 0.6) 100%);
+  backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std);border:1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);overflow:hidden;
+  transition:transform .4s cubic-bezier(.16, 1, .3, 1), border-color .4s ease, box-shadow .4s ease;
+}
+.why-card::before{
+  content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:radial-gradient(circle at 30% 20%, rgba(239,68,68, 0.15), transparent 50%);
+  pointer-events:none;transition:opacity .4s ease;opacity:0.6;
+}
+.why-card:hover{transform:translateY(-8px) scale(1.01);border-color:rgba(239,68,68, 0.4);box-shadow:0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(239,68,68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4)}
+.why-card:hover::before{opacity:1}
+
+.why-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.why-icon-box{
+  position:relative;width:56px;height:56px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(239,68,68, 0.08));
+  border:1px solid rgba(255, 255, 255, 0.2);box-shadow:0 8px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  display:grid;place-items:center;color:var(--glow);transition:transform .3s ease, background-color .3s ease;
+}
+.why-card:hover .why-icon-box{
+  transform:scale(1.1) rotate(-3deg);background:linear-gradient(135deg, rgba(239,68,68, 0.3), rgba(153,27,27, 0.3));
+  color:#fff;border-color:rgba(239,68,68, 0.6);box-shadow:0 0 25px rgba(239,68,68, 0.4);
+}
+.why-badge{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;background:rgba(255, 255, 255, 0.06);border:1px solid rgba(255, 255, 255, 0.15);color:var(--mute);backdrop-filter:blur(8px)}
+.why-card.highlight .why-badge{background:rgba(232,180,160, 0.2);border-color:rgba(232,180,160, 0.5);color:var(--warm)}
+.why-card-body{display:flex;flex-direction:column;gap:12px}
+.why-card-body h3{font:400 24px/1.2 'Manrope', sans-serif;letter-spacing:-.01em;color:#fff;transition:color .3s ease}
+.why-card:hover .why-card-body h3{color:var(--glow)}
+.why-card-body p{font-size:13px;line-height:1.65;color:var(--mute)}
+.why-bullet-list{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:rgba(255, 255, 255, 0.85)}
+.why-bullet-list li{display:flex;align-items:center;gap:8px}
+.why-bullet-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--glow);box-shadow:0 0 8px var(--glow)}
+.why-card-foot{margin-top:24px;padding-top:16px;border-top:1px solid rgba(255, 255, 255, 0.08);display:flex;align-items:center;justify-content:space-between}
+.why-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255, 255, 255, 0.8);transition:color .25s ease, transform .25s ease;cursor:pointer}
+.why-link i{font-style:normal;transition:transform .25s ease}
+.why-card:hover .why-link{color:#fff}
+.why-card:hover .why-link i{transform:translateX(5px);color:var(--glow)}
+
+.pnl{padding:clamp(24px,4vw,40px);border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid var(--line-strong);box-shadow:0 40px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.15);backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tabs button,.seg button{border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--mute);font:600 12px Manrope,sans-serif;cursor:pointer;transition:all .25s}
+.tabs button{padding:10px 20px;border-radius:99px;backdrop-filter:blur(10px)}
+.tabs button:hover{background:rgba(255,255,255,.1);color:#fff}
+.tabs [aria-selected=true],.seg [aria-checked=true]{background:#fff;color:#07090d;border-color:#fff;box-shadow:0 0 20px rgba(255,255,255,.3)}
+
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.calc form{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+.calc form[hidden]{display:none}.calc form>button{grid-column:1/-1;justify-self:start;margin-top:8px}
+.calc label{display:grid;gap:6px;font-size:12px;font-weight:600;color:var(--mute)}
+.calc input,.calc select{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:#fff;font:500 15px Manrope,sans-serif;outline:0;transition:all .25s}
+.calc option{color:#000}.calc input:focus,.calc select:focus{border-color:var(--glow);box-shadow:0 0 12px rgba(239,68,68,.3)}
+
+.res{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:280px;padding:32px;text-align:center;border-radius:var(--radius-md);background:rgba(5,7,12,.6);border:1px solid var(--line-strong);box-shadow:inset 0 0 30px rgba(0,0,0,.5)}
+.res .n{font-size:clamp(3.4rem,7vw,5rem);color:var(--glow);text-shadow:0 0 25px rgba(239,68,68,.4)}.res p{max-width:34ch;font-size:13px;color:var(--mute)}
+.res[data-s=g] strong{color:#35d07f}.res[data-s=a] strong{color:#ffb04a}
+
+.pp{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px;margin:8px 0 clamp(28px,4vw,48px);border-radius:24px;background:rgba(255,255,255,.03);border:1px solid var(--line);backdrop-filter:var(--blur-std)}
+.seg button{position:relative;display:grid;gap:2px;padding:16px 8px;border:0;border-radius:18px;font-size:14px;text-align:center}
+.seg span{font:400 11px Manrope,sans-serif;opacity:.8}
+.seg b{position:absolute;top:-10px;left:50%;transform:translateX(-50%);padding:3px 10px;border-radius:99px;background:var(--glow);color:#ffffff;font-size:10px;font-weight:700;white-space:nowrap;box-shadow:0 0 12px rgba(239,68,68,.5)}
+
+.pw{perspective:1000px}
+.pass{
+  --a:239,68,68;--rx:0deg;--ry:0deg;--mx:30%;--my:20%;position:relative;max-width:540px;aspect-ratio:1.586;margin-inline:auto;
+  padding:clamp(20px,3.5vw,34px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-radius:24px;
+  background:radial-gradient(circle at var(--mx) var(--my),rgba(var(--a),.45),transparent 60%),linear-gradient(145deg,rgba(38,9,11,.9),rgba(8,4,5,.95));
+  border:1px solid rgba(var(--a),.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 40px 90px rgba(0,0,0,.7),0 0 60px rgba(var(--a),.25);
+  backdrop-filter:blur(20px);transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .2s,box-shadow .4s;
+}
+.pass::before{content:"";position:absolute;right:-8%;top:50%;width:60%;aspect-ratio:1;transform:translateY(-50%);clip-path:polygon(25% 4%,75% 4%,100% 50%,75% 96%,25% 96%,0 50%);background:linear-gradient(160deg,rgba(var(--a),.35),transparent 70%)}
+.pass::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.18) 48%,transparent 61%) var(--mx) 0/300% 100%;pointer-events:none}
+.pass>*{position:relative;z-index:1}
+.pt{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.pt div{display:grid;text-align:right}.pt b{font:400 clamp(1.3rem,2.6vw,1.8rem)/1 Anton,sans-serif;letter-spacing:.04em}
+.pt span{font-size:10px;font-weight:700;letter-spacing:.16em;color:rgba(255,255,255,.8)}
+.chipc{width:46px;height:34px;border-radius:8px;background:linear-gradient(135deg,rgb(var(--a)),rgba(var(--a),.4) 55%,rgb(var(--a)));box-shadow:inset 0 0 0 1px rgba(255,255,255,.4), 0 4px 12px rgba(0,0,0,.3)}
+.pn{font:400 clamp(2.6rem,7vw,4.6rem)/.95 Anton,sans-serif;text-transform:uppercase;letter-spacing:.02em;text-shadow:0 0 20px rgba(0,0,0,.5)}
+.pb{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;font-size:12px;color:rgba(255,255,255,.8)}
+.pb strong{font:500 clamp(1.3rem,2.6vw,1.8rem)/1 Manrope,sans-serif;color:#fff}
+.sw{animation:swap .45s}@keyframes swap{from{opacity:0;transform:translateY(10px)}}
+
+.pd{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.pr{font:300 clamp(3rem,6vw,4.6rem)/1 Manrope,sans-serif;letter-spacing:-.04em;text-shadow:0 0 20px rgba(255,255,255,.2)}
+.pd small{max-width:38ch;font-size:13px;color:var(--mute)}
+.pd ul{list-style:none;display:grid;gap:10px;margin:6px 0 10px;font-size:14px}.pd li::before{content:"✓";margin-right:10px;color:var(--glow);font-weight:bold}
+
+.loc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(16px,2.5vw,28px)}
+.loc h3{font:400 clamp(1.8rem,3vw,2.4rem)/1 Anton,sans-serif;letter-spacing:.03em;text-transform:uppercase;margin-bottom:22px}
+.loc dl{display:grid;gap:18px;margin-bottom:26px}.loc dt{font-size:12px;font-weight:700;color:var(--glow);letter-spacing:.05em;margin-bottom:4px}
+.loc dd{font-size:15px}.loc dd small{display:block;font-size:12px;color:var(--mute)}
+.hr{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px dashed rgba(255,255,255,.1)}.hr.wm{color:var(--warm)}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.map{min-height:420px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-strong);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.map iframe{display:block;width:100%;height:100%;min-height:420px;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.7)}
+
+.faq{display:grid;gap:12px}
+.faq details{border-radius:var(--radius-md);background:var(--glass-card);border:1px solid var(--line);backdrop-filter:var(--blur-std);transition:all .3s}
+.faq details[open]{background:rgba(255,255,255,.06);border-color:var(--line-strong)}
+.faq summary{display:flex;justify-content:space-between;gap:16px;padding:22px 26px;cursor:pointer;list-style:none;font-size:15px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--glow);font-size:22px;line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 26px 24px;max-width:62ch;font-size:14px;color:var(--mute);line-height:1.6}
+
+@media(max-width:900px){.c3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.pp,.loc,.calc{grid-template-columns:1fr}}
+@media(max-width:600px){.c3{grid-template-columns:1fr}.seg{grid-template-columns:repeat(2,1fr)}}
+
+/* Bold & Premium Styling */
+:root{
+  --plat:#d1d5db;
+  --plat-deep:#8b929e;
+  --plat-grad:linear-gradient(135deg,#ffffff 0%,#d1d5db 38%,#8b929e 72%,#f3f4f6 100%);
+  --mute:rgba(255,255,255,.82);
+}
+html,body,body *:not(svg):not(svg *){font-weight:700}
+body{font-weight:700;letter-spacing:.005em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background-image:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(209,213,219,.06),transparent 70%)}
+p,li,.note,label,input,select,textarea,small,td,th{font-weight:700;line-height:1.65}
+h2,h3,h4,.price,b,strong,.btn,.tag{font-weight:800}
+.mark,.time,.coach h3,.n,.pt b,.pn,.loc h3,.logo-brand{font-weight:400!important;font-synthesis:none}
+.price{font-weight:800!important;letter-spacing:-.02em}
+h2{font-weight:800;letter-spacing:-.02em;background:linear-gradient(180deg,#fff 0%,#f3f4f6 55%,#9ca3af 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+h3{letter-spacing:-.01em}
+.tag{background:var(--plat-grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;letter-spacing:.28em}
+.logo-badge{color:var(--plat);border-color:rgba(209,213,219,.55);background:rgba(209,213,219,.12);font-weight:800}
+.nav-links-desktop a{font-weight:800;color:rgba(255,255,255,.88)}
+.nav-links-desktop a::after{background:var(--plat);box-shadow:0 0 10px rgba(209,213,219,.8)}
+.btn{font-weight:800;border-color:rgba(209,213,219,.38);box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.28),0 0 0 1px rgba(209,213,219,.05)}
+.btn:hover{border-color:rgba(209,213,219,.8);box-shadow:0 14px 40px rgba(0,0,0,.55),0 0 24px rgba(209,213,219,.25),inset 0 1px 0 rgba(255,255,255,.35)}
+.card{border-color:rgba(209,213,219,.16);box-shadow:0 30px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px rgba(209,213,219,.04)}
+.card:hover{border-color:rgba(209,213,219,.45)}
+.card p,.note,.tags span{color:rgba(255,255,255,.86)}
+.tags span{font-weight:700;border-color:rgba(209,213,219,.25)}
+::selection{background:var(--plat);color:#05070c}
+
+/* Language Switch */
+.lang-switch{display:inline-flex;align-items:center;padding:3px;border-radius:99px;background:rgba(255,255,255,.05);border:1px solid rgba(209,213,219,.35);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 8px 24px rgba(0,0,0,.35)}
+.lang-switch button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.82);font:800 11px/1 'Hind Siliguri',Manrope,sans-serif;padding:8px 13px;border-radius:99px;cursor:pointer;transition:background-color .25s,color .25s,box-shadow .25s}
+.lang-switch button:hover{color:#fff;background:rgba(255,255,255,.1)}
+.lang-switch button[aria-pressed="true"]{background:var(--plat-grad);color:#ffffff;box-shadow:0 4px 14px rgba(209,213,219,.35)}
+@media(max-width:520px){.nav-actions>.btn{display:none}.lang-switch button{padding:8px 11px}}
+html[lang="bn"] body,
+html[lang="bn"] body *:not(.mark):not(.logo-brand):not(.logo-brand *):not(.pt b):not(.pt span):not(svg *){font-family:'Hind Siliguri','Noto Sans Bengali',Manrope,system-ui,sans-serif}
+html[lang="bn"] body *:not(.logo-brand):not(.logo-brand *):not(.mark):not(.pt *){letter-spacing:0!important}
+html[lang="bn"] body{line-height:1.75}
+html[lang="bn"] :is(h2,h3,h4,.time,.pn,.n,.coach h3,.loc h3,.pr){line-height:1.4!important;font-weight:700!important}
+html[lang="bn"] .price{font-family:'Hind Siliguri',Manrope,sans-serif!important}
+
+/* Obsidian & Crimson Luxury Layer */
+:root{
+  --crimson:#ef4444;--crimson-deep:#991b1b;--blood:#dc2626;
+  --crimson-grad:linear-gradient(135deg,#ff5a5f 0%,#e11d48 45%,#7f1d1d 100%);
+  --btn-grad:linear-gradient(135deg,#dc2626 0%,#7f1d1d 52%,#0a0305 100%);
+  --btn-grad-soft:linear-gradient(135deg,rgba(153,27,27,.6) 0%,rgba(10,3,5,.95) 100%);
+  --lux-glass:linear-gradient(145deg,rgba(20,5,5,.6),rgba(5,5,5,.8));
+  --lux-line:rgba(239,68,68,.2);
+  --lux-shadow:0 30px 60px rgba(0,0,0,.8),0 0 35px rgba(239,68,68,.25);
+  --line:rgba(255,255,255,.1);--line-strong:rgba(239,68,68,.32);
+  --glass-card:rgba(20,5,5,.5);--mute:rgba(255,255,255,.78)
+}
+html{background:#020306;scrollbar-color:#991b1b #05070c}
+body{background-color:#05070c;background-attachment:fixed;background-image:
+  radial-gradient(ellipse 70% 45% at 85% -5%,rgba(220,38,38,.2),transparent 70%),
+  radial-gradient(ellipse 60% 40% at 0% 55%,rgba(153,27,27,.18),transparent 72%),
+  radial-gradient(ellipse 70% 40% at 100% 95%,rgba(220,38,38,.15),transparent 70%),
+  linear-gradient(180deg,#05070c 0%,#020306 100%)}
+::selection{background:var(--crimson);color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#05070c}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#ef4444,#7f1d1d);border-radius:99px;border:2px solid #05070c}
+
+.hero{background:radial-gradient(ellipse 55% 42% at 50% 28%,rgba(153,27,27,.25),transparent 75%),radial-gradient(ellipse 60% 50% at 100% 10%,rgba(220,38,38,.18),transparent 70%),radial-gradient(ellipse 60% 50% at 0% 80%,rgba(153,27,27,.2),transparent 70%),linear-gradient(180deg,#05070c,#020306)}
+.mark{background:linear-gradient(180deg,rgba(255,255,255,.34) 0%,rgba(239,68,68,.22) 55%,rgba(239,68,68,0) 92%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 20px 50px rgba(127,29,29,.55))}
+.logo-brand{background:linear-gradient(135deg,#ffffff 0%,#d1d5db 42%,#ef4444 100%);-webkit-background-clip:text;background-clip:text}
+h2{background:linear-gradient(180deg,#fff 0%,#fff 55%,#d1d5db 100%);-webkit-background-clip:text;background-clip:text}
+
+.nav-header.scrolled{background:rgba(5,7,12,.78);border-bottom:1px solid rgba(239,68,68,.22);box-shadow:0 16px 40px rgba(0,0,0,.8),0 0 30px rgba(239,68,68,.08)}
+.nav-pill-wrapper{background:rgba(20,5,5,.55);border-color:rgba(209,213,219,.18)}
+.nav-links-desktop a::after{background:var(--crimson);box-shadow:0 0 10px rgba(239,68,68,.8)}
+.nav-links-desktop a.active{background:var(--crimson-grad);color:#fff;box-shadow:0 0 20px rgba(239,68,68,.4),inset 0 1px 0 rgba(255,255,255,.3)}
+.lang-switch{background:rgba(20,5,5,.55);border-color:rgba(239,68,68,.35)}
+.lang-switch button[aria-pressed="true"]{background:var(--crimson-grad);color:#fff;box-shadow:0 4px 14px rgba(239,68,68,.5)}
+
+.tag{background:var(--crimson-grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 0 10px rgba(239,68,68,.45))}
+.logo-badge,.chip,.ph .bd,.seg b,.why-card.highlight .why-badge{background:var(--crimson-grad);color:#fff;border:1px solid rgba(255,255,255,.22);box-shadow:0 0 18px rgba(239,68,68,.45),inset 0 1px 0 rgba(255,255,255,.35);text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.why-badge{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.35);color:#fecaca}
+
+.btn{background:var(--btn-grad-soft);border:1px solid rgba(239,68,68,.35);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.14);transition:all .3s cubic-bezier(.16,1,.3,1)}
+.btn i{background:linear-gradient(145deg,#fff,#d1d5db);color:#7f1d1d}
+.btn.w{background:var(--btn-grad);color:#fff;border-color:rgba(209,213,219,.5);box-shadow:0 12px 34px rgba(0,0,0,.6),0 0 22px rgba(239,68,68,.3),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn.w i{background:#fff;color:#991b1b}
+.btn:hover,.btn.w:hover{background:linear-gradient(135deg,#ef4444 0%,#991b1b 52%,#12040a 100%);color:#fff;border-color:#ef4444;box-shadow:0 14px 40px rgba(0,0,0,.7),0 0 28px rgba(239,68,68,.6),inset 0 1px 0 rgba(255,255,255,.3);transform:translateY(-2px)}
+.btn:hover i,.btn.w:hover i{background:#fff;transform:translateX(3px)}
+.go{background:var(--crimson-grad);color:#fff;box-shadow:0 0 22px rgba(239,68,68,.55)}
+.go:hover{background:#fff;color:#991b1b}
+.chips .on,.tabs [aria-selected=true],.seg [aria-checked=true]{background:var(--crimson-grad);color:#fff;border-color:rgba(255,255,255,.28);box-shadow:0 0 22px rgba(239,68,68,.5),inset 0 1px 0 rgba(255,255,255,.3)}
+.chips button:hover,.tabs button:hover{background:rgba(239,68,68,.14);border-color:rgba(239,68,68,.5);color:#fff}
+
+.card,.why-card,.pnl,.glass,.faq details,.fg>div,.seg,.res{background:var(--lux-glass);border:1px solid var(--lux-line);box-shadow:0 24px 50px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:var(--blur-std);-webkit-backdrop-filter:var(--blur-std)}
+.card:hover,.why-card:hover,.pnl:hover,.faq details:hover,.fg>div:hover{background:linear-gradient(145deg,rgba(40,8,8,.7),rgba(8,5,5,.85));border-color:rgba(239,68,68,.55);box-shadow:var(--lux-shadow),inset 0 1px 0 rgba(255,255,255,.14)}
+.card.sel{border-color:rgba(239,68,68,.6);box-shadow:var(--lux-shadow),inset 0 0 0 1px rgba(239,68,68,.25)}
+.faq details[open]{background:linear-gradient(145deg,rgba(40,8,8,.7),rgba(8,5,5,.85));border-color:rgba(239,68,68,.45)}
+.glass input,.calc input,.calc select{background:rgba(0,0,0,.45);border:1px solid rgba(239,68,68,.22)}
+.glass input:focus,.calc input:focus,.calc select:focus{border-color:var(--crimson);box-shadow:0 0 0 3px rgba(239,68,68,.15),0 0 18px rgba(239,68,68,.35)}
+.map{border-color:rgba(239,68,68,.3);box-shadow:0 30px 60px rgba(0,0,0,.8),0 0 35px rgba(239,68,68,.15);position:relative}
+.map iframe{filter:invert(.92) hue-rotate(180deg) saturate(.3) brightness(.85)}
+.map::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(153,27,27,.16),transparent 60%)}
+
+.pass{
+  --a:239,68,68;background:radial-gradient(circle at var(--mx) var(--my),rgba(var(--a),.34),transparent 58%),repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.35) 0 2px,transparent 2px 6px),linear-gradient(145deg,#2a0608 0%,#12040a 45%,#050203 100%);
+  border:1px solid rgba(239,68,68,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 0 1px rgba(255,255,255,.04),0 40px 90px rgba(0,0,0,.85),0 0 60px rgba(239,68,68,.3);
+}
+.pass:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 40px 90px rgba(0,0,0,.9),0 0 80px rgba(239,68,68,.45)}
+.chipc{position:relative;background:linear-gradient(135deg,#ff6b6b 0%,#ef4444 40%,#7f1d1d 70%,#ff4d4d 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45),0 0 18px rgba(239,68,68,.7),0 4px 14px rgba(0,0,0,.5)}
+.chipc::before,.chipc::after{content:"";position:absolute;background:rgba(255,255,255,.35)}
+.chipc::before{left:50%;top:0;bottom:0;width:1px}.chipc::after{left:0;right:0;top:50%;height:1px}
+.pn{background:linear-gradient(180deg,#fff 0%,#d1d5db 60%,#9ca3af 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
+
+@media(prefers-reduced-motion:reduce){.btn:hover,.btn.w:hover,.card:hover,.why-card:hover{transform:none}}
+/* Phones: dumbbell gets its own stage between the title and the form, so nothing covers or blurs it */
+@media(max-width:860px){
+.hero .mark{order:0}
+.hero #gl{order:1;position:relative;inset:auto;z-index:2;flex:none;width:calc(100% + 2*var(--pad));margin:-6px calc(-1*var(--pad)) 0;height:clamp(230px,34vh,330px);height:clamp(230px,34svh,330px);-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
+.hero .glass{order:2}
+.hero .row{order:3}
+}
+</style>
+<style id="trainers-css">
+.crew{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(18px,3vw,32px);max-width:1040px;margin-inline:auto}
+.tc{--x:50%;--y:0%;position:relative;isolation:isolate;display:flex;flex-direction:column;padding:10px 10px clamp(22px,3vw,30px);border-radius:var(--radius-lg);background:linear-gradient(160deg,rgba(34,8,10,.85),rgba(6,3,5,.95));box-shadow:0 40px 80px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.14)}
+.tc::before{content:"";position:absolute;inset:0;z-index:-1;padding:1px;border-radius:inherit;background:linear-gradient(150deg,rgba(255,255,255,.7),rgba(239,68,68,.55) 35%,rgba(255,255,255,.06) 65%,rgba(209,213,219,.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.tc::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--x) var(--y),rgba(239,68,68,.22),transparent 60%)}
+.tc:hover::after{opacity:1}
+.tc-ph{position:relative;aspect-ratio:4/4.6;overflow:hidden;border-radius:calc(var(--radius-lg) - 8px);background:radial-gradient(circle at 50% 35%,#7f1d1d,#12060a 75%)}
+.tc-ph::before{content:attr(data-i);position:absolute;inset:0;display:grid;place-items:center;font:400 clamp(9rem,22vw,15rem)/1 Anton,sans-serif;color:rgba(255,255,255,.1)}
+.tc-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.tc:hover .tc-ph img{transform:scale(1.05)}
+.tc-ph::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(transparent,rgba(5,3,4,.9))}
+.tc-ph .bd{position:absolute;left:16px;bottom:16px;z-index:1;padding:7px 16px;border-radius:99px;background:var(--crimson-grad);color:#fff;border:1px solid rgba(255,255,255,.22);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 18px rgba(239,68,68,.45),inset 0 1px 0 rgba(255,255,255,.35)}
+.tc-b{display:flex;flex:1;flex-direction:column;gap:16px;padding:22px clamp(12px,2vw,20px) 0}
+.tc h3{font:400 clamp(2.2rem,4vw,3.2rem)/1 Anton,sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.tc p{max-width:44ch;font-size:14px;color:var(--mute)}
+.tc .role{margin-top:8px;font-size:13px;font-weight:700;color:var(--glow)}
+.hrs{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:14px 0;border-block:1px solid var(--line);font-size:13px}
+.hrs span{margin-right:auto;color:var(--mute)}
+.hrs b{font-weight:800;font-variant-numeric:tabular-nums}
+.tc .tags{margin:0}
+.tc .btn{align-self:flex-start;margin-top:auto}
+@media(prefers-reduced-motion:reduce){.tc-ph img,.tc::after{transition:none}.tc:hover .tc-ph img{transform:none}}
+</style>
+<style id="why-css">
+.why-bullet-list{display:grid;margin-top:20px}
+.why-bullet-list li{padding:11px 0;border-top:1px solid var(--line)}
+.why-card.feat{padding:clamp(32px,4vw,52px);min-height:420px;background:radial-gradient(120% 90% at 100% 0%,rgba(239,68,68,.2),transparent 55%),var(--lux-glass)}
+.why-card.feat>.why-card-top{transform:none}
+.why-card.feat .why-icon-box,.why-card.feat:hover .why-icon-box{position:absolute;top:clamp(20px,3vw,36px);right:clamp(20px,3vw,36px);width:auto;height:auto;padding:0;border:0;background:none;box-shadow:none;transform:none;color:rgba(255,255,255,.1);pointer-events:none;transition:color .5s}
+.why-card.feat:hover .why-icon-box{color:rgba(239,68,68,.24)}
+.why-card.feat .why-icon-box svg{width:clamp(120px,18vw,200px);height:clamp(120px,18vw,200px);stroke-width:.7}
+.why-card.feat h3{font:400 clamp(2.2rem,4vw,3.6rem)/1 Anton,sans-serif;letter-spacing:.02em;text-transform:uppercase;max-width:12ch}
+.why-card.feat .why-bullet-list{grid-template-columns:1fr 1fr;column-gap:32px}
+.why-card.wide .why-bullet-list{margin-top:0}
+@media(min-width:900px){
+.why-grid{grid-template-columns:repeat(6,1fr)}
+.why-card{grid-column:span 2}
+.why-card.feat{grid-column:span 4}
+.why-card.wide{grid-column:span 6;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(24px,4vw,56px)}
+.why-card.wide .why-card-top{flex-direction:column;align-items:flex-start;gap:14px}
+}
+@media(min-width:600px) and (max-width:899.98px){.why-grid{grid-template-columns:1fr 1fr}.why-card.feat,.why-card.wide{grid-column:span 2}}
+</style>
+
+<!-- Premium WhatsApp Details Modal Styles -->
+<style id="wa-modal-css">
+.wa-modal-overlay{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(2,3,6,.82);backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;visibility:hidden;transition:opacity .35s cubic-bezier(.16,1,.3,1),visibility .35s;
+}
+.wa-modal-overlay.is-active{opacity:1;visibility:visible}
+.wa-modal-card{
+  position:relative;width:min(100%,480px);
+  background:linear-gradient(150deg,rgba(30,10,12,.95) 0%,rgba(10,4,6,.98) 100%);
+  border:1px solid rgba(239,68,68,.35);border-radius:28px;padding:32px 28px;
+  box-shadow:0 35px 90px rgba(0,0,0,.9),0 0 50px rgba(239,68,68,.25),inset 0 1px 0 rgba(255,255,255,.2);
+  transform:translateY(24px) scale(.96);transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+.wa-modal-overlay.is-active .wa-modal-card{transform:translateY(0) scale(1)}
+.wa-modal-close{
+  position:absolute;top:20px;right:20px;width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#fff;
+  display:grid;place-items:center;font-size:18px;cursor:pointer;transition:all .2s;
+}
+.wa-modal-close:hover{background:rgba(239,68,68,.3);border-color:var(--glow);transform:rotate(90deg)}
+.wa-modal-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.wa-modal-icon{
+  width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#25D366,#128C7E);
+  display:grid;place-items:center;color:#fff;box-shadow:0 0 20px rgba(37,211,102,.4);flex-shrink:0;
+}
+.wa-modal-title h3{font:700 20px/1.2 'Manrope',sans-serif;color:#fff}
+.wa-modal-title p{font-size:12px;color:var(--mute)}
+.wa-modal-preview{
+  padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.04);border:1px dashed rgba(239,68,68,.3);
+  margin-bottom:20px;font-size:12px;color:#fca5a5;display:flex;align-items:center;gap:8px;
+}
+.wa-modal-preview i{color:var(--glow);font-style:normal;font-weight:bold}
+.wa-modal-form{display:flex;flex-direction:column;gap:14px}
+.wa-modal-field{display:flex;flex-direction:column;gap:6px}
+.wa-modal-field label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.wa-modal-field input,.wa-modal-field textarea{
+  background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);border-radius:12px;
+  color:#fff;padding:10px 14px;font:500 14px 'Manrope',sans-serif;outline:none;transition:all .25s;
+}
+.wa-modal-field input:focus,.wa-modal-field textarea:focus{border-color:var(--glow);box-shadow:0 0 15px rgba(239,68,68,.3);background:rgba(0,0,0,.7)}
+.wa-modal-field textarea{resize:none;height:60px}
+.wa-modal-submit{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;margin-top:8px;
+  border-radius:99px;border:none;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);
+  color:#fff;font:800 13px 'Manrope',sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;box-shadow:0 10px 28px rgba(37,211,102,.35);transition:all .25s;
+}
+.wa-modal-submit:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(37,211,102,.5);filter:brightness(1.1)}
+</style>
+<style id="glass-css">
+/* Frosted-glass UI over a fixed full-page 3D scene (dumbbells + particles) */
+:root{--gl-blur:blur(12px) saturate(1.6);--gl-edge:rgba(255,255,255,.16);
+--gl-fill:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.02) 55%,rgba(239,68,68,.045)),rgba(10,4,7,.22);
+--gl-fill-hi:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 55%,rgba(239,68,68,.08)),rgba(14,5,8,.26);
+--gl-shadow:0 18px 44px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.22),inset 0 0 0 1px rgba(255,255,255,.03)}
+#gl{position:fixed;inset:0;width:100%;height:100%;margin:0;z-index:-1;pointer-events:none;-webkit-mask-image:none;mask-image:none}
+html{background-color:#05070c;background-attachment:fixed;background-image:radial-gradient(ellipse 70% 45% at 85% -5%,rgba(220,38,38,.2),transparent 70%),radial-gradient(ellipse 60% 40% at 0% 55%,rgba(153,27,27,.18),transparent 72%),radial-gradient(ellipse 70% 40% at 100% 95%,rgba(220,38,38,.15),transparent 70%),linear-gradient(180deg,#05070c 0%,#020306 100%)}
+html body{background:transparent}
+html body .hero{background:radial-gradient(ellipse 55% 42% at 50% 28%,rgba(153,27,27,.18),transparent 75%),radial-gradient(ellipse 60% 50% at 100% 10%,rgba(220,38,38,.12),transparent 70%),radial-gradient(ellipse 60% 50% at 0% 80%,rgba(153,27,27,.14),transparent 70%)}
+html body .beam::before{opacity:.55}
+html body :is(.card,.why-card,.pnl,.glass,.faq details,.fg>div,.seg,.res,.tc,.cta,.bar){background:var(--gl-fill);border-color:var(--gl-edge);box-shadow:var(--gl-shadow);-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur)}
+html body :is(.card,.why-card,.pnl,.faq details,.fg>div,.tc):hover,html body .faq details[open]{background:var(--gl-fill-hi);border-color:rgba(239,68,68,.5);box-shadow:var(--gl-shadow),0 0 32px rgba(239,68,68,.18)}
+html body .pass{background:radial-gradient(circle at var(--mx) var(--my),rgba(var(--a),.32),transparent 60%),repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 2px,transparent 2px 6px),linear-gradient(145deg,rgba(70,12,16,.4),rgba(12,4,8,.3));-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 24px 60px rgba(0,0,0,.4),0 0 50px rgba(239,68,68,.22)}
+html body .foot{background:radial-gradient(ellipse 60% 42% at 50% 100%,rgba(239,68,68,.16),transparent 78%),linear-gradient(180deg,rgba(5,7,12,.12),rgba(2,3,6,.5));-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur)}
+html body .nav-header.scrolled{background:rgba(5,7,12,.5)}
+@media(max-width:860px){html body .hero .glass{margin-top:clamp(180px,30svh,300px)}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){html body :is(.card,.why-card,.pnl,.glass,.faq details,.fg>div,.seg,.res,.tc,.cta,.bar,.pass,.foot){background:rgba(14,6,9,.85)}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="curtain" aria-hidden="true" data-dyn><b>POWER GYM</b></div><i id="prog" aria-hidden="true"></i><i id="spot" aria-hidden="true"></i>
+
+<!-- Modal for details before sending WhatsApp message -->
+<div class="wa-modal-overlay" id="waModal" aria-hidden="true">
+  <div class="wa-modal-card" role="dialog" aria-labelledby="waModalTitle">
+    <button class="wa-modal-close" id="waModalClose" aria-label="Close dialog">×</button>
+    <div class="wa-modal-header">
+      <div class="wa-modal-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+      </div>
+      <div class="wa-modal-title">
+        <h3 id="waModalTitle" data-dyn>Connect on WhatsApp</h3>
+        <p data-dyn>Provide your details to complete your request</p>
+      </div>
+    </div>
+    <div class="wa-modal-preview">
+      <i>Intent:</i> <span id="waModalIntent">Booking / Inquiry</span>
+    </div>
+    <form class="wa-modal-form" id="waForm">
+      <div class="wa-modal-field">
+        <label for="waName" data-dyn>Your Full Name *</label>
+        <input type="text" id="waName" required placeholder="e.g. Tanvir Hasan" autocomplete="name">
+      </div>
+      <div class="wa-modal-field">
+        <label for="waPhone" data-dyn>Phone / WhatsApp Number *</label>
+        <input type="tel" id="waPhone" required placeholder="e.g. 01700000000" autocomplete="tel">
+      </div>
+      <div class="wa-modal-field">
+        <label for="waAddress" data-dyn>Address / Area *</label>
+        <input type="text" id="waAddress" required placeholder="e.g. Boro Bazar / Vatiapara, Chuadanga" autocomplete="street-address">
+      </div>
+      <div class="wa-modal-field">
+        <label for="waNotes" data-dyn>Additional Notes (Optional)</label>
+        <textarea id="waNotes" placeholder="Preferred workout time, fitness background, or questions..."></textarea>
+      </div>
+      <button type="submit" class="wa-modal-submit" data-dyn>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+        Send Details via WhatsApp
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Navigation Header -->
+<header class="nav-header" id="mainHeader">
+  <div class="nav-container">
+    <a class="logo-brand" href="#top" aria-label="Power Gym Home">
+      POWER GYM <span class="logo-badge">PRO</span>
+    </a>
+
+    <div class="nav-pill-wrapper" role="navigation" aria-label="Desktop Navigation">
+      <ul class="nav-links-desktop">
+        <li><a href="#top" class="active">Home</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#why">Features</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#location">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Language / ভাষা" data-dyn><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="bn" aria-pressed="false">বাংলা</button></div>
+      <a class="btn" href="#plans"><i>›</i>Join Now</a>
+      
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
+  <ul class="mobile-nav-links">
+    <li><a href="#top"><span>01</span> Home</a></li>
+    <li><a href="#training"><span>02</span> Training Floors</a></li>
+    <li><a href="#why"><span>03</span> Everything You Need</a></li>
+    <li><a href="#trainers"><span>04</span> Pro Trainers</a></li>
+    <li><a href="#schedule"><span>05</span> Session Timings</a></li>
+    <li><a href="#plans"><span>06</span> Power Passes</a></li>
+    <li><a href="#tools"><span>07</span> Fitness Toolkit</a></li>
+    <li><a href="#location"><span>08</span> Location &amp; Hours</a></li>
+    <li><a href="#faq"><span>09</span> Frequent Questions</a></li>
+  </ul>
+  
+  <div class="mobile-drawer-footer">
+    <a class="btn w" href="#plans" style="justify-content:center; width:100%; padding:14px;"><i>›</i>Get Power Pass</a>
+    <div class="mobile-info-chips">
+      <div><i class="dot" style="background:#35d07f;"></i> Boro Bazar, Chuadanga</div>
+      <span>6 AM – 11 PM</span>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+<section class="hero">
+<h1 class="mark">POWER<span class="sr"> Gym Chuadanga</span></h1>
+<form class="glass" id="f">
+<label for="nm">What do you want to train for?</label>
+<input id="nm" placeholder="Your name" autocomplete="name">
+<div class="chips" role="group" aria-label="Your goal">
+<button type="button" class="on" aria-pressed="true" data-g="Build muscle">Build muscle</button><button type="button" aria-pressed="false" data-g="Lose weight">Lose weight</button><button type="button" aria-pressed="false" data-g="General fitness">General fitness</button><button type="button" aria-pressed="false" data-g="Women's session">Women's session</button>
+</div>
+<button type="submit" class="go" aria-label="Send your goal on WhatsApp">→</button>
+</form>
+<div class="row">
+<a class="btn dn" href="#training" aria-label="Scroll down">↓</a>
+<p>Strength and cardio floor, expert coaches and a women's session in Boro Bazar, Chuadanga. Open Saturday to Thursday, 6 AM to 11 PM.</p>
+<a class="btn" href="#plans"><i>›</i>See plans</a>
+</div>
+</section>
+
+<section id="floor" class="tight"><div class="wrap">
+<div class="bar" id="live"><span><i class="dot"></i>Live floor status <em id="lv" data-dyn>Open 6 AM to 11 PM</em></span><span>Saturday to Thursday</span></div>
+<div class="cols t">
+<article class="card"><span class="when">Gear</span><b>Heavy power racks</b></article>
+<article class="card"><span class="when">Timings</span><b>6:00 AM – 11:00 PM</b></article>
+<article class="card"><span class="when">Coaching</span><b>2 expert trainers</b></article>
+<article class="card"><span class="when">Community</span><b>200+ active athletes</b></article>
+</div></div></section>
+
+<section class="tight" aria-label="Power Gym in numbers"><div class="wrap"><div class="cols s">
+<article class="card"><span class="n">500<i>+</i></span><b>Active members</b><span class="when">Dedicated local athletes</span></article>
+<article class="card"><span class="n">35<i>+</i></span><b>Pro racks &amp; stations</b><span class="when">Free weights &amp; machines</span></article>
+<article class="card"><span class="n">98<i>%</i></span><b>Goal satisfaction</b><span class="when">Proven member results</span></article>
+<article class="card"><span class="n">6<i> Days</i></span><b>Weekly access</b><span class="when">Sat – Thu continuous training</span></article>
+</div></div></section>
+
+<section id="training" class="beam"><div class="wrap">
+<div class="head"><div><p class="tag">[ TRAINING ]</p><h2>Strength beyond limits</h2></div></div>
+<div class="cols">
+<article class="card sel"><h3>Strength and cardio floor</h3><p>Heavy power racks, machines and cardio equipment for beginners and regular lifters. Lockers and showers are included.</p><div class="vis v1"></div><a class="btn" href="#plans"><i>›</i>Join now</a></article>
+<article class="card"><h3>Women's session</h3><p>A calm, dedicated session for women led by Coach Saima, 2 PM to 6 PM, Saturday to Thursday.</p><div class="vis v2"></div><a class="btn" href="#schedule"><i>›</i>See timings</a></article>
+<article class="card"><h3>Coaches who fix your form</h3><p>Ahsan and Coach Saima watch your technique and adjust your plan as you progress.</p><div class="vis v3"></div><a class="btn" href="#schedule"><i>›</i>Meet them</a></article>
+</div></div></section>
+
+<section id="why" class="beam"><div class="wrap">
+  <div class="head">
+    <div>
+      <p class="tag">[ WHY POWER GYM ]</p>
+      <h2>Everything you need to train</h2>
+    </div>
+    <p class="note">A complete high-performance fitness ecosystem designed for safety, comfort, and real physical transformation.</p>
+  </div>
+
+  <div class="why-grid">
+    <article class="why-card feat">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 3-3"></path><path d="m2 6 3-3"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path>
+          </svg>
+        </div>
+        <span class="why-badge">Full Floor</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Strength &amp; cardio floor</h3>
+        <p>Weights, Olympic power racks, resistance machines and cardio deck suited for both beginners and seasoned lifters.</p>
+        <ul class="why-bullet-list">
+          <li>Dumbbells up to 40kg</li>
+          <li>Treadmills &amp; rowers</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link" href="#training">Explore floor <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="why-card highlight">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a5 5 0 1 0 0 10 5 5 0 1 0 0-10z"></path><path d="M12 12v10"></path><path d="M9 17h6"></path><circle cx="12" cy="7" r="2" fill="currentColor" opacity="0.3"></circle>
+          </svg>
+        </div>
+        <span class="why-badge">Dedicated</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Women’s session</h3>
+        <p>A calm, dedicated session for women, 2:00 PM to 6:00 PM, Saturday to Thursday. Guided in private by Coach Saima.</p>
+        <ul class="why-bullet-list">
+          <li>Dedicated coach &amp; timing</li>
+          <li>100% private floor space</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link" href="#schedule">See timings <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="why-card">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+        <span class="why-badge">Form Check</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Coaches who fix your form</h3>
+        <p>Expert trainers watch your lifting biomechanics, prevent injuries, and adjust your routine as you gain strength.</p>
+        <ul class="why-bullet-list">
+          <li>Real-time posture correction</li>
+          <li>Custom progression plan</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link" href="#trainers">Meet coaches <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="why-card">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 7h.01"></path><path d="M7 12h10"></path><path d="M7 17h6"></path>
+          </svg>
+        </div>
+        <span class="why-badge">Included</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Lockers &amp; showers</h3>
+        <p>Store your gym bag safely in private lockers, train with peace of mind, and refresh in clean showers afterwards.</p>
+        <ul class="why-bullet-list">
+          <li>Day lockers &amp; hot showers</li>
+          <li>Hygienic changing zone</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link" href="#plans">View pass perks <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="why-card">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <span class="why-badge">In-House</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Supplement store</h3>
+        <p>Browse 100% authentic protein, creatine and pre-workouts in-store or order directly for quick pickup via WhatsApp.</p>
+        <ul class="why-bullet-list">
+          <li>Verified authentic stock</li>
+          <li>WhatsApp fast order</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link wa-trigger" data-m="Hi POWER GYM, I want to inquire about available supplements.">Inquire stock <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="why-card wide">
+      <div class="why-card-top">
+        <div class="why-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line>
+            <path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path>
+          </svg>
+        </div>
+        <span class="why-badge">Interactive</span>
+      </div>
+      <div class="why-card-body">
+        <h3>Fitness calculators</h3>
+        <p>Use our built-in interactive tools to calculate your BMI, daily calorie target, protein intake, and estimated 1-Rep Max.</p>
+        <ul class="why-bullet-list">
+          <li>BMI &amp; Calories calculator</li>
+          <li>Strength 1RM estimator</li>
+        </ul>
+      </div>
+      <div class="why-card-foot">
+        <a class="why-link" href="#tools">Use tools <i>→</i></a>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section id="trainers"><div class="wrap">
+<div class="head"><div><p class="tag">[ TRAINERS ]</p><h2>Train with a coach who knows lifting</h2></div><p class="note">Technique, progression and a plan built around your body.</p></div>
+<div class="crew">
+<article class="tc">
+<div class="tc-ph" data-i="A"><img src="ahsan.jpg" alt="Coach Ahsan, head trainer at Power Gym" loading="lazy" onerror="this.style.display='none'"><span class="bd">Head trainer</span></div>
+<div class="tc-b">
+<div><h3>Ahsan</h3><p class="role">Strength &amp; biomechanics lead</p></div>
+<p>Specializes in heavy strength gains, muscle hypertrophy, powerlifting technique and customized body transformations for men.</p>
+<div class="hrs"><span>Men’s sessions</span><b>6 AM – 2 PM</b><b>6 PM – 11 PM</b></div>
+<div class="tags"><span>Hypertrophy</span><span>Strength prep</span></div>
+<a class="btn wa-trigger" data-m="Hi POWER GYM, I want to book a visit and train with Coach Ahsan."><i>›</i>Book a visit</a>
+</div>
+</article>
+<article class="tc">
+<div class="tc-ph" data-i="S"><img src="saima.jpg" alt="Coach Saima, women’s session lead at Power Gym" loading="lazy" onerror="this.style.display='none'"><span class="bd">Women’s session</span></div>
+<div class="tc-b">
+<div><h3>Saima</h3><p class="role">Women’s fitness lead</p></div>
+<p>Leads the women’s session in a calm, private space: cardio, core work, toning and fat-loss coaching.</p>
+<div class="hrs"><span>Women’s session</span><b>2 PM – 6 PM</b></div>
+<div class="tags"><span>Cardio</span><span>Core work</span><span>Toning</span><span>Fat loss</span></div>
+<a class="btn wa-trigger" data-m="Hi POWER GYM, I want to book a visit and train with Coach Saima."><i>›</i>Book a visit</a>
+</div>
+</article>
+</div>
+</div></section>
+
+<section id="schedule"><div class="wrap">
+<div class="head"><div><p class="tag">[ SCHEDULE ]</p><h2>Three sessions, six days a week</h2></div><p class="note">Open Saturday to Thursday. Friday is closed for maintenance.</p></div>
+<div class="cols">
+<article class="card"><span class="time">6 AM – 2 PM</span><h3>Morning strength</h3><p>Compound lifts, progressive overload and heavy rack training for men. Head coach Ahsan.</p><a class="btn wa-trigger" data-m="Hi POWER GYM, I want to join the men's morning session."><i>›</i>Join session</a></article>
+<article class="card"><span class="time">2 PM – 6 PM</span><h3>Women's fitness and sculpt</h3><p>Cardio, core work, toning and fat loss in a private space. Lead coach Saima.</p><a class="btn wa-trigger" data-m="Hi POWER GYM, I want to join the women's session."><i>›</i>Join session</a></article>
+<article class="card"><span class="time">6 PM – 11 PM</span><h3>Evening power hour</h3><p>Heavy deadlifts, squats, bench press form coaching and conditioning for men. Head coach Ahsan.</p><a class="btn wa-trigger" data-m="Hi POWER GYM, I want to join the men's evening session."><i>›</i>Join session</a></article>
+</div></div></section>
+
+<section id="plans" class="beam"><div class="wrap">
+<div class="head"><div><p class="tag">[ MEMBERSHIP ]</p><h2>Choose your Power Pass</h2></div><p class="note">Clear prices, no hidden charges. The admission fee is waived on plans of 4 months or more.</p></div>
+<div class="seg" id="seg" role="radiogroup" aria-label="Pass length">
+<button type="button" role="radio" aria-checked="false" data-d="1 month" data-p="499" data-n="1" data-a="209,213,219" data-fee="Plus ৳500 admission fee" data-k="Full gym floor access|Changing room and showers|Initial workout guidance">1 month<span>৳499</span></button>
+<button type="button" role="radio" aria-checked="true" data-d="4 months" data-p="1499" data-n="4" data-a="239,68,68" data-fee="No admission fee, save ৳500" data-k="Full gym floor access|Changing room and lockers|Free body composition test"><b>Most popular</b>4 months<span>৳1,499</span></button>
+<button type="button" role="radio" aria-checked="false" data-d="6 months" data-p="2199" data-n="6" data-a="232,180,160" data-fee="No admission fee" data-k="Full gym floor access|Free customized diet chart|Extended training support">6 months<span>৳2,199</span></button>
+<button type="button" role="radio" aria-checked="false" data-d="1 year" data-p="3199" data-n="12" data-a="244,63,94" data-fee="No admission fee" data-k="All pro racks and cardio deck|Free dedicated locker|Lowest price per month">1 year<span>৳3,199</span></button>
+</div>
+<div class="pp">
+<div class="pw"><div class="pass" id="pass">
+<div class="pt"><i class="chipc"></i><div><b>POWER GYM</b><span>POWER PASS</span></div></div>
+<div class="pn" id="pn" data-dyn></div>
+<div class="pb"><span>Boro Bazar, Chuadanga<br>Sat – Thu, 6 AM – 11 PM</span><strong id="pp" data-dyn></strong></div>
+</div></div>
+<div class="pd" aria-live="polite">
+<span class="when" id="dn" data-dyn></span>
+<h3 class="pr" id="pr" data-dyn></h3>
+<small id="pf" data-dyn></small>
+<ul id="pk" data-dyn></ul>
+<a class="btn w wa-trigger" id="pcta" target="_blank" rel="noopener"><i>›</i><span id="pct" data-dyn>Get this pass</span></a>
+</div>
+</div></div></section>
+
+<section id="tools"><div class="wrap">
+<div class="head"><div><p class="tag">[ TOOLKIT ]</p><h2>Power fitness calculator</h2></div><p class="note">Check your health metrics, your daily calorie and protein target, or your estimated one-rep max.</p></div>
+<div class="pnl">
+<div class="tabs" role="tablist" aria-label="Calculators">
+<button type="button" role="tab" aria-selected="true" data-k="bmi">BMI &amp; health</button><button type="button" role="tab" aria-selected="false" data-k="cal">Calorie &amp; protein target</button><button type="button" role="tab" aria-selected="false" data-k="orm">1-rep max strength</button>
+</div>
+<div class="calc"><div>
+<form data-k="bmi"><label>Weight (kg)<input name="w" type="number" min="20" max="300" step="any" value="72"></label><label>Height (cm)<input name="h" type="number" min="100" max="250" step="any" value="175"></label><button type="submit" class="btn w"><i>›</i>Calculate BMI</button></form>
+<form data-k="cal" hidden><label>Age<input name="a" type="number" min="14" max="90" value="25"></label><label>Sex<select name="s"><option value="5">Male</option><option value="-161">Female</option></select></label><label>Weight (kg)<input name="w" type="number" min="20" max="300" step="any" value="72"></label><label>Height (cm)<input name="h" type="number" min="100" max="250" step="any" value="175"></label><label>Activity<select name="x"><option value="1.375">Light, 1–3 days a week</option><option value="1.55" selected>Moderate, 3–5 days a week</option><option value="1.725">Heavy, 6 days a week</option></select></label><label>Goal<select name="g"><option value="-500">Lose fat</option><option value="0">Maintain</option><option value="300" selected>Build muscle</option></select></label><button type="submit" class="btn w"><i>›</i>Calculate target</button></form>
+<form data-k="orm" hidden><label>Weight lifted (kg)<input name="w" type="number" min="1" max="500" step="any" value="80"></label><label>Reps completed<input name="r" type="number" min="1" max="12" value="5"></label><button type="submit" class="btn w"><i>›</i>Estimate 1RM</button></form>
+</div>
+<div class="res" id="res" role="status" data-s="g"><span class="when">Your result</span><span class="n" id="rv" data-dyn></span><strong id="rl" data-dyn></strong><p id="rt" data-dyn></p></div>
+</div></div></div></section>
+
+<section id="visit"><div class="wrap"><div class="cta">
+<b class="mark" aria-hidden="true">POWER</b>
+<h2>Visit before you join</h2>
+<p>Tour the floor, meet a coach and ask about plans. We confirm a time on WhatsApp.</p>
+<a class="btn w wa-trigger" data-m="Hi POWER GYM, I want to book a visit."><i>›</i>Book a visit</a>
+</div></div></section>
+
+<section id="location"><div class="wrap">
+<div class="head"><div><p class="tag">[ LOCATION &amp; HOURS ]</p><h2>Visit Power Gym Chuadanga</h2></div></div>
+<div class="loc">
+<div class="pnl"><h3>Power Gym Main Center</h3>
+<dl>
+<div><dt>Address</dt><dd>Boro Bazar, Chuadanga Sadar, Chuadanga<small>Khulna Division, Bangladesh</small></dd></div>
+<div><dt>Phone &amp; WhatsApp</dt><dd><a href="tel:+8801707248891">+880 1707-248891</a></dd></div>
+<div><dt>Daily schedule, Saturday to Thursday</dt><dd><div class="hr"><span>Men’s morning</span><span>6:00 AM – 2:00 PM</span></div><div class="hr wm"><span>Women’s session</span><span>2:00 PM – 6:00 PM</span></div><div class="hr"><span>Men’s evening</span><span>6:00 PM – 11:00 PM</span></div></dd></div>
+</dl>
+<div class="acts"><a class="btn w" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boro+Bazar%2C+Chuadanga+Sadar%2C+Chuadanga%2C+Bangladesh" target="_blank" rel="noopener"><i>›</i>Get map directions</a><a class="btn wa-trigger" data-m="Hi POWER GYM, I want to book a visit."><i>›</i>Book a visit</a></div>
+</div>
+<div class="map"><iframe title="Power Gym Chuadanga on the map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Boro+Bazar,+Chuadanga+Sadar,+Chuadanga,+Bangladesh&amp;output=embed"></iframe></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap">
+<div class="head"><div><p class="tag">[ FREQUENT QUESTIONS ]</p><h2>Got questions? We have answers.</h2></div></div>
+<div class="faq">
+<details name="faq"><summary>Are all supplements sold at Power Gym authentic?</summary><p>Yes. Check the seal and expiry date on any product before you buy, and message us on WhatsApp if you want to confirm a product first.</p></details>
+<details name="faq"><summary>How does WhatsApp ordering work for products?</summary><p>Message us on WhatsApp with the product name and quantity. We reply to confirm stock and price, then arrange your order.</p></details>
+<details name="faq"><summary>Is there any admission fee for multi-month plans?</summary><p>No. The ৳500 admission fee applies only to the 1 month plan. It is waived on plans of 4 months or more.</p></details>
+<details name="faq"><summary>Are trainers available to guide beginners?</summary><p>Yes. Coach Ahsan leads the men’s sessions and Coach Saima leads the women’s session. They check your form and adjust your plan as you progress.</p></details>
+<details name="faq"><summary>What are the exact female training hours?</summary><p>The women’s session runs 2:00 PM to 6:00 PM, Saturday to Thursday, led by Coach Saima. The gym is closed on Friday.</p></details>
+</div></div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+<div class="fg">
+<div><h4>Visit</h4><span>Boro Bazar, Chuadanga Sadar, Chuadanga, Khulna Division, Bangladesh</span></div>
+<div><h4>Contact</h4><a href="tel:+8801707248891">+880 1707-248891</a><a class="wa-trigger" data-m="Hi POWER GYM, I have a question.">Message on WhatsApp</a></div>
+<div><h4>Hours</h4><span>Saturday to Thursday, 6 AM to 11 PM</span><span>Friday closed</span></div>
+<div><h4>Explore</h4><a href="#training">Training</a><a href="#why">Features</a><a href="#schedule">Schedule</a><a href="#plans">Plans</a><a href="#tools">Calculators</a><a href="#faq">FAQ</a></div>
+</div>
+<small class="copy">© 2026 Power Gym Chuadanga</small>
+<p class="mark" aria-hidden="true">POWER</p>
+</div></footer>
+
+<script>
+const BN={"Men’s sessions":"পুরুষদের সেশন","Women’s fitness lead":"মহিলাদের ফিটনেস লিড","Saima":"সাইমা","Coach Saima, women’s session lead at Power Gym":"পাওয়ার জিমের মহিলাদের সেশন লিড কোচ সাইমা","Leads the women’s session in a calm, private space: cardio, core work, toning and fat-loss coaching.":"শান্ত, প্রাইভেট পরিবেশে মহিলাদের সেশন পরিচালনা করেন: কার্ডিও, কোর ওয়ার্ক, টোনিং ও ফ্যাট লস কোচিং।","Cardio":"কার্ডিও","Core work":"কোর ওয়ার্ক","Toning":"টোনিং","Fat loss":"ফ্যাট লস","Home": "হোম", "Training": "ট্রেনিং", "Features": "সুবিধা", "Trainers": "ট্রেইনার", "Schedule": "সময়সূচি", "Plans": "প্ল্যান", "Tools": "টুলস", "Visit": "ঘুরে দেখুন", "FAQ": "প্রশ্নোত্তর", "Join Now": "এখনই যোগ দিন", "Power Gym Home": "পাওয়ার জিম হোম", "Desktop Navigation": "ডেস্কটপ নেভিগেশন", "Toggle navigation menu": "মেনু খুলুন/বন্ধ করুন", "Training Floors": "ট্রেনিং ফ্লোর", "Everything You Need": "আপনার যা যা দরকার", "Pro Trainers": "প্রো ট্রেইনার", "Session Timings": "সেশনের সময়", "Power Passes": "পাওয়ার পাস", "Fitness Toolkit": "ফিটনেস টুলকিট", "Location & Hours": "ঠিকানা ও সময়", "Frequent Questions": "সাধারণ প্রশ্ন", "Get Power Pass": "পাওয়ার পাস নিন", "Boro Bazar, Chuadanga": "বড় বাজার, চুয়াডাঙ্গা", "6 AM – 11 PM": "সকাল ৬টা – রাত ১১টা", "What do you want to train for?": "আপনি কীসের জন্য ট্রেনিং করতে চান?", "Your name": "আপনার নাম", "Your goal": "আপনার লক্ষ্য", "Build muscle": "মাংসপেশি গঠন", "Lose weight": "ওজন কমানো", "General fitness": "সাধারণ ফিটনেস", "Women's session": "মহিলাদের সেশন", "Women’s session": "মহিলাদের সেশন", "Send your goal on WhatsApp": "হোয়াটসঅ্যাপে আপনার লক্ষ্য পাঠান", "Scroll down": "নিচে স্ক্রল করুন", "Strength and cardio floor, expert coaches and a women's session in Boro Bazar, Chuadanga. Open Saturday to Thursday, 6 AM to 11 PM.": "বড় বাজার, চুয়াডাঙ্গায় স্ট্রেংথ ও কার্ডিও ফ্লোর, দক্ষ কোচ এবং মহিলাদের জন্য আলাদা সেশন। শনিবার থেকে বৃহস্পতিবার, সকাল ৬টা থেকে রাত ১১টা পর্যন্ত খোলা।", "See plans": "প্ল্যান দেখুন", "Live floor status": "লাইভ ফ্লোর স্ট্যাটাস", "Saturday to Thursday": "শনিবার থেকে বৃহস্পতিবার", "Gear": "সরঞ্জাম", "Heavy power racks": "হেভি পাওয়ার র‍্যাক", "Timings": "সময়", "6:00 AM – 11:00 PM": "সকাল ৬:০০ – রাত ১১:০০", "Coaching": "কোচিং", "2 expert trainers": "২ জন দক্ষ ট্রেইনার", "Community": "কমিউনিটি", "200+ active athletes": "২০০+ সক্রিয় অ্যাথলেট", "Power Gym in numbers": "সংখ্যায় পাওয়ার জিম", "Active members": "সক্রিয় সদস্য", "Dedicated local athletes": "নিবেদিত স্থানীয় অ্যাথলেট", "Pro racks & stations": "প্রো র‍্যাক ও স্টেশন", "Free weights & machines": "ফ্রি ওয়েট ও মেশিন", "Goal satisfaction": "লক্ষ্য পূরণে সন্তুষ্টি", "Proven member results": "প্রমাণিত সদস্য ফলাফল", "Days": "দিন", "Weekly access": "সাপ্তাহিক প্রবেশাধিকার", "Sat – Thu continuous training": "শনি – বৃহ নিরবচ্ছিন্ন ট্রেনিং", "[ TRAINING ]": "[ ট্রেনিং ]", "Strength beyond limits": "সীমা ছাড়িয়ে শক্তি", "Strength and cardio floor": "স্ট্রেংথ ও কার্ডিও ফ্লোর", "Heavy power racks, machines and cardio equipment for beginners and regular lifters. Lockers and showers are included.": "নতুন ও নিয়মিত লিফটারদের জন্য হেভি পাওয়ার র‍্যাক, মেশিন ও কার্ডিও সরঞ্জাম। লকার ও শাওয়ার অন্তর্ভুক্ত।", "Join now": "এখনই যোগ দিন", "A calm, dedicated session for women led by Coach Saima, 2 PM to 6 PM, Saturday to Thursday.": "কোচ সাইমার নেতৃত্বে মহিলাদের জন্য শান্ত, আলাদা সেশন, শনিবার থেকে বৃহস্পতিবার, দুপুর ২টা থেকে সন্ধ্যা ৬টা।", "See timings": "সময় দেখুন", "Coaches who fix your form": "যে কোচরা আপনার ফর্ম ঠিক করেন", "Ahsan and Coach Saima watch your technique and adjust your plan as you progress.": "আহসান ও কোচ সাইমা আপনার টেকনিক লক্ষ্য করেন এবং অগ্রগতি অনুযায়ী আপনার প্ল্যান ঠিক করে দেন।", "Meet them": "পরিচয় করুন", "[ WHY POWER GYM ]": "[ কেন পাওয়ার জিম ]", "Everything you need to train": "ট্রেনিংয়ের জন্য আপনার যা যা দরকার", "A complete high-performance fitness ecosystem designed for safety, comfort, and real physical transformation.": "নিরাপত্তা, স্বাচ্ছন্দ্য ও প্রকৃত শারীরিক রূপান্তরের জন্য তৈরি একটি পূর্ণাঙ্গ হাই-পারফরম্যান্স ফিটনেস ব্যবস্থা।", "Dedicated": "নির্ধারিত", "Full Floor": "পূর্ণ ফ্লোর", "Form Check": "ফর্ম চেক", "Included": "অন্তর্ভুক্ত", "In-House": "নিজস্ব", "Interactive": "ইন্টারঅ্যাক্টিভ", "A calm, dedicated session for women, 2:00 PM to 6:00 PM, Saturday to Thursday. Guided in private by Coach Saima.": "মহিলাদের জন্য শান্ত, আলাদা সেশন, শনিবার থেকে বৃহস্পতিবার, দুপুর ২:০০ থেকে সন্ধ্যা ৬:০০। কোচ সাইমা ব্যক্তিগতভাবে গাইড করেন।", "Dedicated coach & timing": "নির্ধারিত কোচ ও সময়", "100% private floor space": "১০০% প্রাইভেট ফ্লোর", "Strength & cardio floor": "স্ট্রেংথ ও কার্ডিও ফ্লোর", "Weights, Olympic power racks, resistance machines and cardio deck suited for both beginners and seasoned lifters.": "ওয়েট, অলিম্পিক পাওয়ার র‍্যাক, রেজিস্ট্যান্স মেশিন ও কার্ডিও ডেক—নতুন ও অভিজ্ঞ উভয় লিফটারের জন্য উপযুক্ত।", "Dumbbells up to 40kg": "৪০ কেজি পর্যন্ত ডাম্বেল", "Treadmills & rowers": "ট্রেডমিল ও রোয়ার", "Explore floor": "ফ্লোর দেখুন", "Expert trainers watch your lifting biomechanics, prevent injuries, and adjust your routine as you gain strength.": "দক্ষ ট্রেইনাররা আপনার লিফটিং বায়োমেকানিক্স লক্ষ্য করেন, ইনজুরি প্রতিরোধ করেন এবং শক্তি বাড়ার সাথে সাথে রুটিন সামঞ্জস্য করেন।", "Real-time posture correction": "রিয়েল-টাইম ভঙ্গি সংশোধন", "Custom progression plan": "কাস্টম অগ্রগতি পরিকল্পনা", "Meet coaches": "কোচদের সাথে পরিচয়", "Lockers & showers": "লকার ও শাওয়ার", "Store your gym bag safely in private lockers, train with peace of mind, and refresh in clean showers afterwards.": "আপনার জিম ব্যাগ নিরাপদে প্রাইভেট লকারে রাখুন, নিশ্চিন্তে ট্রেনিং করুন এবং শেষে পরিষ্কার শাওয়ারে ফ্রেশ হয়ে নিন।", "Day lockers & hot showers": "ডে লকার ও গরম পানির শাওয়ার", "Hygienic changing zone": "স্বাস্থ্যকর চেঞ্জিং জোন", "View pass perks": "পাসের সুবিধা দেখুন", "Supplement store": "সাপ্লিমেন্ট স্টোর", "Browse 100% authentic protein, creatine and pre-workouts in-store or order directly for quick pickup via WhatsApp.": "১০০% আসল প্রোটিন, ক্রিয়েটিন ও প্রি-ওয়ার্কআউট দোকানে দেখুন, অথবা হোয়াটসঅ্যাপে অর্ডার করে দ্রুত সংগ্রহ করুন।", "Verified authentic stock": "যাচাইকৃত আসল স্টক", "WhatsApp fast order": "হোয়াটসঅ্যাপে দ্রুত অর্ডার", "Inquire stock": "স্টক জিজ্ঞাসা করুন", "Fitness calculators": "ফিটনেস ক্যালকুলেটর", "Use our built-in interactive tools to calculate your BMI, daily calorie target, protein intake, and estimated 1-Rep Max.": "আমাদের ইন্টারঅ্যাক্টিভ টুল দিয়ে আপনার বিএমআই, দৈনিক ক্যালরি লক্ষ্য, প্রোটিন গ্রহণ এবং আনুমানিক ১-রেপ ম্যাক্স হিসাব করুন।", "BMI & Calories calculator": "বিএমআই ও ক্যালরি ক্যালকুলেটর", "Strength 1RM estimator": "স্ট্রেংথ ১আরএম অনুমানক", "Use tools": "টুল ব্যবহার করুন", "[ TRAINERS ]": "[ ট্রেইনার ]", "Train with a coach who knows lifting": "লিফটিং জানা কোচের সাথে ট্রেনিং করুন", "Technique, progression and a plan built around your body.": "টেকনিক, অগ্রগতি এবং আপনার শরীর অনুযায়ী তৈরি প্ল্যান।", "Coach Ahsan, head trainer at Power Gym": "পাওয়ার জিমের হেড ট্রেইনার কোচ আহসান", "Head trainer": "হেড ট্রেইনার", "Ahsan": "আহসান", "Strength & biomechanics lead": "স্ট্রেংথ ও বায়োমেকানিক্স প্রধান", "Specializes in heavy strength gains, muscle hypertrophy, powerlifting technique and customized body transformations for men.": "পুরুষদের জন্য হেভি স্ট্রেংথ বৃদ্ধি, মাংসপেশি হাইপারট্রফি, পাওয়ারলিফটিং টেকনিক এবং কাস্টমাইজড বডি ট্রান্সফরমেশনে বিশেষজ্ঞ।", "Hypertrophy": "হাইপারট্রফি", "Strength prep": "স্ট্রেংথ প্রস্তুতি", "Book a visit": "ভিজিট বুক করুন", "[ SCHEDULE ]": "[ সময়সূচি ]", "Three sessions, six days a week": "সপ্তাহে ছয় দিন, তিনটি সেশন", "Open Saturday to Thursday. Friday is closed for maintenance.": "শনিবার থেকে বৃহস্পতিবার খোলা। রক্ষণাবেক্ষণের জন্য শুক্রবার বন্ধ।", "6 AM – 2 PM": "সকাল ৬টা – দুপুর ২টা", "2 PM – 6 PM": "দুপুর ২টা – সন্ধ্যা ৬টা", "6 PM – 11 PM": "সন্ধ্যা ৬টা – রাত ১১টা", "Morning strength": "সকালের স্ট্রেংথ", "Compound lifts, progressive overload and heavy rack training for men. Head coach Ahsan.": "পুরুষদের জন্য কম্পাউন্ড লিফট, প্রগ্রেসিভ ওভারলোড ও হেভি র‍্যাক ট্রেনিং। হেড কোচ আহসান।", "Join session": "সেশনে যোগ দিন", "Women's fitness and sculpt": "মহিলাদের ফিটনেস ও স্কাল্পট", "Cardio, core work, toning and fat loss in a private space. Lead coach Saima.": "প্রাইভেট পরিবেশে কার্ডিও, কোর ওয়ার্ক, টোনিং ও ফ্যাট লস। লিড কোচ সাইমা।", "Evening power hour": "সন্ধ্যার পাওয়ার আওয়ার", "Heavy deadlifts, squats, bench press form coaching and conditioning for men. Head coach Ahsan.": "পুরুষদের জন্য হেভি ডেডলিফট, স্কোয়াট, বেঞ্চ প্রেস ফর্ম কোচিং ও কন্ডিশনিং। হেড কোচ আহসান।", "[ MEMBERSHIP ]": "[ মেম্বারশিপ ]", "Choose your Power Pass": "আপনার পাওয়ার পাস বেছে নিন", "Clear prices, no hidden charges. The admission fee is waived on plans of 4 months or more.": "স্পষ্ট মূল্য, কোনো লুকানো চার্জ নেই। ৪ মাস বা তার বেশি মেয়াদের প্ল্যানে ভর্তি ফি মওকুফ।", "Pass length": "পাসের মেয়াদ", "1 month": "১ মাস", "4 months": "৪ মাস", "6 months": "৬ মাস", "1 year": "১ বছর", "Most popular": "সবচেয়ে জনপ্রিয়", "Plus ৳500 admission fee": "সাথে ৳৫০০ ভর্তি ফি", "No admission fee, save ৳500": "ভর্তি ফি নেই, ৳৫০০ সাশ্রয়", "No admission fee": "ভর্তি ফি নেই", "Full gym floor access": "পূর্ণ জিম ফ্লোরে প্রবেশাধিকার", "Changing room and showers": "চেঞ্জিং রুম ও শাওয়ার", "Initial workout guidance": "প্রাথমিক ওয়ার্কআউট গাইডেন্স", "Changing room and lockers": "চেঞ্জিং রুম ও লকার", "Free body composition test": "বিনামূল্যে বডি কম্পোজিশন টেস্ট", "Free customized diet chart": "বিনামূল্যে কাস্টমাইজড ডায়েট চার্ট", "Extended training support": "বর্ধিত ট্রেনিং সহায়তা", "All pro racks and cardio deck": "সব প্রো র‍্যাক ও কার্ডিও ডেক", "Free dedicated locker": "বিনামূল্যে নির্ধারিত লকার", "Lowest price per month": "প্রতি মাসে সর্বনিম্ন মূল্য", "Sat – Thu, 6 AM – 11 PM": "শনি – বৃহ, সকাল ৬টা – রাত ১১টা", "Get this pass": "এই পাস নিন", "[ TOOLKIT ]": "[ টুলকিট ]", "Power fitness calculator": "পাওয়ার ফিটনেস ক্যালকুলেটর", "Check your health metrics, your daily calorie and protein target, or your estimated one-rep max.": "আপনার স্বাস্থ্য মেট্রিক্স, দৈনিক ক্যালরি ও প্রোটিন লক্ষ্য, অথবা আনুমানিক ওয়ান-রেপ ম্যাক্স দেখুন।", "Calculators": "ক্যালকুলেটর", "BMI & health": "বিএমআই ও স্বাস্থ্য", "Calorie & protein target": "ক্যালরি ও প্রোটিন লক্ষ্য", "1-rep max strength": "১-রেপ ম্যাক্স শক্তি", "Weight (kg)": "ওজন (কেজি)", "Height (cm)": "উচ্চতা (সেমি)", "Calculate BMI": "বিএমআই হিসাব করুন", "Age": "বয়স", "Sex": "লিঙ্গ", "Male": "পুরুষ", "Female": "মহিলা", "Activity": "কার্যকলাপ", "Light, 1–3 days a week": "হালকা, সপ্তাহে ১–৩ দিন", "Moderate, 3–5 days a week": "মাঝারি, সপ্তাহে ৩–৫ দিন", "Heavy, 6 days a week": "ভারী, সপ্তাহে ৬ দিন", "Goal": "লক্ষ্য", "Lose fat": "চর্বি কমানো", "Maintain": "বজায় রাখা", "Calculate target": "লক্ষ্য হিসাব করুন", "Weight lifted (kg)": "ওঠানো ওজন (কেজি)", "Reps completed": "সম্পন্ন রেপ", "Estimate 1RM": "১আরএম অনুমান করুন", "Your result": "আপনার ফলাফল", "Visit before you join": "যোগ দেওয়ার আগে ঘুরে দেখুন", "Tour the floor, meet a coach and ask about plans. We confirm a time on WhatsApp.": "ফ্লোর ঘুরে দেখুন, কোচের সাথে পরিচিত হোন এবং প্ল্যান সম্পর্কে জিজ্ঞাসা করুন। আমরা হোয়াটসঅ্যাপে সময় নিশ্চিত করব।", "[ LOCATION & HOURS ]": "[ ঠিকানা ও সময় ]", "Visit Power Gym Chuadanga": "পাওয়ার জিম চুয়াডাঙ্গা ঘুরে দেখুন", "Power Gym Main Center": "পাওয়ার জিম মূল কেন্দ্র", "Address": "ঠিকানা", "Boro Bazar, Chuadanga Sadar, Chuadanga": "বড় বাজার, চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা", "Khulna Division, Bangladesh": "খুলনা বিভাগ, বাংলাদেশ", "Phone & WhatsApp": "ফোন ও হোয়াটসঅ্যাপ", "Daily schedule, Saturday to Thursday": "দৈনিক সময়সূচি, শনিবার থেকে বৃহস্পতিবার", "Men’s morning": "পুরুষদের সকাল", "6:00 AM – 2:00 PM": "সকাল ৬:০০ – দুপুর ২:০০", "2:00 PM – 6:00 PM": "দুপুর ২:০০ – সন্ধ্যা ৬:০০", "Men’s evening": "পুরুষদের সন্ধ্যা", "6:00 PM – 11:00 PM": "সন্ধ্যা ৬:০০ – রাত ১১:০০", "Get map directions": "ম্যাপে রাস্তা দেখুন", "Power Gym Chuadanga on the map": "মানচিত্রে পাওয়ার জিম চুয়াডাঙ্গা", "[ FREQUENT QUESTIONS ]": "[ সাধারণ প্রশ্ন ]", "Got questions? We have answers.": "প্রশ্ন আছে? আমাদের কাছে উত্তর আছে।", "Are all supplements sold at Power Gym authentic?": "পাওয়ার জিমে বিক্রি হওয়া সব সাপ্লিমেন্ট কি আসল?", "Yes. Check the seal and expiry date on any product before you buy, and message us on WhatsApp if you want to confirm a product first.": "হ্যাঁ। কেনার আগে যেকোনো পণ্যের সিল ও মেয়াদ শেষের তারিখ দেখে নিন, আর আগে নিশ্চিত হতে চাইলে হোয়াটসঅ্যাপে আমাদের মেসেজ করুন।", "How does WhatsApp ordering work for products?": "পণ্যের জন্য হোয়াটসঅ্যাপে অর্ডার কীভাবে কাজ করে?", "Message us on WhatsApp with the product name and quantity. We reply to confirm stock and price, then arrange your order.": "পণ্যের নাম ও পরিমাণ দিয়ে হোয়াটসঅ্যাপে মেসেজ করুন। আমরা স্টক ও দাম নিশ্চিত করে উত্তর দেব, তারপর আপনার অর্ডার ব্যবস্থা করব।", "Is there any admission fee for multi-month plans?": "একাধিক মাসের প্ল্যানে কি কোনো ভর্তি ফি আছে?", "No. The ৳500 admission fee applies only to the 1 month plan. It is waived on plans of 4 months or more.": "না। ৳৫০০ ভর্তি ফি শুধু ১ মাসের প্ল্যানে প্রযোজ্য। ৪ মাস বা তার বেশি মেয়াদের প্ল্যানে এটি মওকুফ।", "Are trainers available to guide beginners?": "নতুনদের গাইড করার জন্য কি ট্রেইনার আছেন?", "Yes. Coach Ahsan leads the men’s sessions and Coach Saima leads the women’s session. They check your form and adjust your plan as you progress.": "হ্যাঁ। কোচ আহসান পুরুষদের সেশন এবং কোচ সাইমা মহিলাদের সেশন পরিচালনা করেন। তাঁরা আপনার ফর্ম দেখেন এবং অগ্রগতি অনুযায়ী প্ল্যান ঠিক করে দেন।", "What are the exact female training hours?": "মহিলাদের ট্রেনিংয়ের সঠিক সময় কখন?", "The women’s session runs 2:00 PM to 6:00 PM, Saturday to Thursday, led by Coach Saima. The gym is closed on Friday.": "মহিলাদের সেশন শনিবার থেকেবৃহস্পতিবার, দুপুর ২:০০ থেকে সন্ধ্যা ৬:০০, কোচ সাইমার নেতৃত্বে। শুক্রবার জিম বন্ধ থাকে।", "Contact": "যোগাযোগ", "Hours": "সময়", "Explore": "অন্বেষণ", "Boro Bazar, Chuadanga Sadar, Chuadanga, Khulna Division, Bangladesh": "বড় বাজার, চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা, খুলনা বিভাগ, বাংলাদেশ", "Message on WhatsApp": "হোয়াটসঅ্যাপে মেসেজ করুন", "Saturday to Thursday, 6 AM to 11 PM": "শনিবার থেকে বৃহস্পতিবার, সকাল ৬টা থেকে রাত ১১টা", "Friday closed": "শুক্রবার বন্ধ", "© 2026 Power Gym Chuadanga": "© ২০২৬ পাওয়ার জিম চুয়াডাঙ্গা", "Open now: men’s morning session": "এখন খোলা: পুরুষদের সকালের সেশন", "Open now: women’s session until 6 PM": "এখন খোলা: মহিলাদের সেশন সন্ধ্যা ৬টা পর্যন্ত", "Open now: men’s evening session until 11 PM": "এখন খোলা: পুরুষদের সন্ধ্যার সেশন রাত ১১টা পর্যন্ত", "Closed, reopens Saturday at 6 AM": "বন্ধ, শনিবার সকাল ৬টায় আবার খুলবে", "Closed, opens at 6 AM": "বন্ধ, সকাল ৬টায় খুলবে", "Open 6 AM to 11 PM": "সকাল ৬টা থেকে রাত ১১টা খোলা", "Underweight": "কম ওজন", "Add calories and lift heavy to build healthy mass.": "ক্যালরি বাড়ান এবং ভারী ওজন তুলে সুস্থ মাংসপেশি গড়ে তুলুন।", "Normal weight": "স্বাভাবিক ওজন", "Great health baseline! Join POWER GYM to build lean muscle density and strength.": "চমৎকার স্বাস্থ্যের ভিত্তি! পাওয়ার জিমে যোগ দিয়ে লিন মাসল ও শক্তি বাড়ান।", "Overweight": "অতিরিক্ত ওজন", "Strength training and a calorie plan can shift this steadily.": "স্ট্রেংথ ট্রেনিং ও ক্যালরি প্ল্যান ধীরে ধীরে এটি পরিবর্তন করতে পারে।", "High BMI range": "উচ্চ বিএমআই পরিসর", "Start light with a coach and build up steadily. We will guide you.": "কোচের সাথে হালকা শুরু করে ধীরে ধীরে বাড়ান। আমরা আপনাকে গাইড করব।", "kcal per day": "কিলোক্যালরি প্রতিদিন", "Estimated one-rep max": "আনুমানিক ওয়ান-রেপ ম্যাক্স", "Power Gym Chuadanga | Gym, Coaches and Women's Session": "পাওয়ার জিম চুয়াডাঙ্গা | জিম, কোচ ও মহিলাদের সেশন", "Connect on WhatsApp": "হোয়াটসঅ্যাপে যুক্ত হোন", "Provide your details to complete your request": "আপনার অনুরোধ সম্পন্ন করতে তথ্য প্রদান করুন", "Your Full Name *": "আপনার পুরো নাম *", "Phone / WhatsApp Number *": "ফোন / হোয়াটসঅ্যাপ নম্বর *", "Address / Area *": "ঠিকানা / এলাকা *", "Additional Notes (Optional)": "অতিরিক্ত নোট (ঐচ্ছিক)", "Send Details via WhatsApp": "হোয়াটসঅ্যাপে তথ্য পাঠান"};
+let LANG='en';const RL=[];
+const dg=s=>LANG==='bn'?String(s).replace(/[0-9]/g,d=>'০১২৩৪৫৬৭৮৯'[d]):s;
+const T=s=>LANG==='bn'&&BN[s]!==undefined?BN[s]:s;
+</script>
+<script>
+const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)],WA='https://wa.me/8801707248891?text=';
+
+/* WhatsApp Prompt Modal System */
+let currentWaIntent = '';
+
+function triggerWaModal(intentText, initialName = '') {
+  currentWaIntent = intentText || 'General Inquiry';
+  const modal = q('#waModal');
+  const intentSpan = q('#waModalIntent');
+  if (intentSpan) intentSpan.textContent = currentWaIntent;
+  if (initialName && q('#waName')) q('#waName').value = initialName;
+  
+  modal.classList.add('is-active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('no-scroll');
+}
+
+function closeWaModal() {
+  const modal = q('#waModal');
+  modal.classList.remove('is-active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('no-scroll');
+}
+
+q('#waModalClose').addEventListener('click', closeWaModal);
+q('#waModal').addEventListener('click', e => {
+  if (e.target === q('#waModal')) closeWaModal();
+});
+
+q('#waForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = q('#waName').value.trim();
+  const phone = q('#waPhone').value.trim();
+  const address = q('#waAddress').value.trim();
+  const notes = q('#waNotes').value.trim();
+
+  let formattedMessage = `Hi POWER GYM,\n\n`;
+  formattedMessage += `📌 *Request:* ${currentWaIntent}\n`;
+  formattedMessage += `👤 *Name:* ${name}\n`;
+  formattedMessage += `📞 *Phone:* ${phone}\n`;
+  formattedMessage += `📍 *Address:* ${address}\n`;
+  if (notes) {
+    formattedMessage += `📝 *Notes:* ${notes}\n`;
+  }
+
+  closeWaModal();
+  window.open(WA + encodeURIComponent(formattedMessage), '_blank', 'noopener');
+});
+
+// Intercept clicks on WhatsApp triggers across the page
+document.addEventListener('click', e => {
+  const trig = e.target.closest('.wa-trigger');
+  if (trig) {
+    e.preventDefault();
+    const intent = trig.dataset.m || trig.innerText.trim();
+    triggerWaModal(intent);
+  }
+});
+
+let goal='Build muscle';
+qa('.chips button').forEach(b=>b.onclick=()=>{qa('.chips button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});goal=b.dataset.g});
+q('#f').onsubmit=e=>{
+  e.preventDefault();
+  const n=q('#nm').value.trim();
+  triggerWaModal(`Goal Training Request (${goal})`, n);
+};
+
+/* Pro Navigation Bar Logic */
+(()=>{
+  const mainHeader = q('#mainHeader');
+  const navToggle = q('#navToggle');
+  const mobileDrawer = q('#mobileDrawer');
+  const deskLinks = qa('.nav-links-desktop a');
+  const mobileLinks = qa('.mobile-nav-links a');
+  const sections = qa('section[id], main[id]');
+
+  const handleScroll = () => {
+    mainHeader.classList.toggle('scrolled', window.scrollY > 30);
+    let current = '';
+    const scrollPosition = window.scrollY + 120;
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    deskLinks.forEach(link => {
+      const href = link.getAttribute('href').replace('#', '');
+      link.classList.toggle('active', href === current || (href === 'top' && !current));
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  const toggleMobileMenu = (open) => {
+    const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('is-open');
+    navToggle.classList.toggle('is-active', isOpen);
+    mobileDrawer.classList.toggle('is-open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+    mobileDrawer.setAttribute('aria-hidden', !isOpen);
+    document.body.classList.toggle('no-scroll', isOpen);
+  };
+
+  navToggle.addEventListener('click', () => toggleMobileMenu());
+  mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) {
+      toggleMobileMenu(false);
+    }
+  });
+})();
+
+/* 3D dumbbells */
+(()=>{
+const cv=q('#gl');if(!window.THREE){cv.hidden=true;return}
+const hero=q('.hero');let R;
+try{R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){cv.hidden=true;return}
+const k=matchMedia('(prefers-reduced-motion:reduce)').matches?0.25:1;
+R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.2;R.outputEncoding=THREE.sRGBEncoding;
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.z=9;
+const E=new THREE.Scene();E.add(new THREE.Mesh(new THREE.BoxGeometry(24,24,24),new THREE.MeshBasicMaterial({color:0x1a070b,side:THREE.BackSide})));
+[[0xffffff,6,0,9,0,14,.3,14],[0xef4444,6,-9,1,2,.3,9,12],[0xd1d5db,3.5,9,0,3,.3,8,10],[0xff2d3d,4,0,-1,9,12,5,.3]].forEach(a=>{const m=new THREE.Mesh(new THREE.BoxGeometry(a[5],a[6],a[7]),new THREE.MeshBasicMaterial({color:new THREE.Color(a[0]).multiplyScalar(a[1])}));m.position.set(a[2],a[3],a[4]);E.add(m)});
+S.environment=new THREE.PMREMGenerator(R).fromScene(E,.02).texture;
+const L=new THREE.DirectionalLight(0xffffff,.8);L.position.set(3,5,6);S.add(L);
+const L2=new THREE.DirectionalLight(0xff2d3d,1.1);L2.position.set(-5,2,-4);S.add(L2);
+const L3=new THREE.PointLight(0xef4444,1.6,18);L3.position.set(0,-2,5);S.add(L3);
+
+const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d');x.fillStyle='#000';x.fillRect(0,0,64,64);x.strokeStyle='#fff';x.lineWidth=5;
+for(let i=-64;i<128;i+=16){x.beginPath();x.moveTo(i,0);x.lineTo(i+64,64);x.moveTo(i+64,0);x.lineTo(i,64);x.stroke()}
+const grip=new THREE.CanvasTexture(c);grip.wrapS=grip.wrapT=THREE.RepeatWrapping;grip.repeat.set(8,8);
+const M=(o)=>new THREE.MeshStandardMaterial(o),
+head=M({color:0x2b2f3a,metalness:.92,roughness:.24}),chr=M({color:0xe5e7eb,metalness:1,roughness:.12}),
+bar=M({color:0x3a3d47,metalness:1,roughness:.35,bumpMap:grip,bumpScale:2}),ring=new THREE.MeshBasicMaterial({color:0xff3347});
+function db(){
+const g=new THREE.Group(),add=(geo,m,px)=>{const o=new THREE.Mesh(geo,m);o.rotation.z=Math.PI/2;o.position.x=px;g.add(o);return o};
+add(new THREE.CylinderGeometry(.17,.17,2.5,40),bar,0);
+[-1,1].forEach(s=>{
+add(new THREE.CylinderGeometry(.8,.8,.7,6),head,s*1.6);
+add(new THREE.CylinderGeometry(.3,.3,.1,40),chr,s*1.22);
+add(new THREE.CylinderGeometry(.3,.3,.16,40),chr,s*2.05);
+const r=new THREE.Mesh(new THREE.TorusGeometry(.52,.028,12,64),ring);r.rotation.y=Math.PI/2;r.position.x=s*1.96;g.add(r)});
+S.add(g);return g}
+const cfg=[[1,0,.1,0],[.5,-1,-1.2,-1.5],[.42,1,1.4,-2.5]],B=cfg.map(db);
+S.fog=new THREE.Fog(0x06070c,9.5,17);
+const N=520,pa=new Float32Array(N*3);for(let i=0;i<N;i++){pa[i*3]=(Math.random()-.5)*16;pa[i*3+1]=(Math.random()-.5)*9;pa[i*3+2]=(Math.random()-.5)*8-1}
+const pgm=new THREE.BufferGeometry();pgm.setAttribute('position',new THREE.BufferAttribute(pa,3));
+const em=new THREE.Points(pgm,new THREE.PointsMaterial({color:0xff4d57,size:.055,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false}));S.add(em);
+const st=new THREE.Mesh(new THREE.TorusGeometry(2.7,.012,8,160),new THREE.MeshBasicMaterial({color:0xff3347,transparent:true,opacity:.55}));st.rotation.x=Math.PI/2.2;S.add(st);
+const st2=st.clone();st2.material=st.material.clone();st2.material.opacity=.25;st2.scale.setScalar(1.35);S.add(st2);
+const mq=matchMedia('(max-width:860px)');let stage=false,lift=1,sa=0.4,sb=0.6,lw=0,lh=0,lp=0;
+function fit(){stage=mq.matches;lift=stage?0.1:0.3;sa=stage?0.65:0.4;sb=stage?0.95:0.6;const w=cv.clientWidth,h=cv.clientHeight,dp=Math.min(devicePixelRatio||1,1.5),a=w/h,hw=3.28*a;if(!w||!h)return;
+if(w!==lw||h!==lh||dp!==lp){lw=w;lh=h;lp=dp;R.setPixelRatio(dp);R.setSize(w,h,false)}C.aspect=a;C.updateProjectionMatrix();
+B.forEach((g,i)=>{g.userData.s=i?(a>(stage?1.9:0.9)?cfg[i][0]:0):stage?Math.min(1.55,a*1.2):Math.min(1,a*1.2);g.userData.x=i?cfg[i][1]*.74*hw:0})}
+let px=0,py=0,tx=0,ty=0,on=true;
+addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5},{passive:true});
+new IntersectionObserver(e=>on=e[0].isIntersecting).observe(cv);
+fit();addEventListener('resize',fit);if(window.ResizeObserver)new ResizeObserver(fit).observe(cv);
+const t0=performance.now()+900;
+(function loop(){requestAnimationFrame(loop);if(!on)return;
+const t=(performance.now()-t0)/1e3,sc=Math.min(scrollY/innerHeight,1.2)*lift;px+=(tx-px)*.05;py+=(ty-py)*.05;
+B.forEach((g,i)=>{const d=g.userData,a=Math.min(1,Math.max(0,(t-.1-i*.25)/1.3)),e=1-Math.pow(1-a,3);
+g.scale.setScalar(d.s*e);
+g.position.set(d.x+px*(.6+i*.3),cfg[i][2]+Math.sin(t*.9+i*2)*.1*k+sc*1.8,cfg[i][3]);
+g.rotation.set(.35+py*.4+Math.sin(t*.5+i)*.08*k,i?t*(.25+i*.1)*k*(i%2?1:-1):Math.sin(t*sa)*sb*k+px*.9,-.3+sc*.7)});
+em.rotation.y=t*.03*k+px*.3;em.rotation.x=py*.15;em.position.y=sc*1.4;st.rotation.z=t*.3*k;st2.rotation.z=-t*.2*k;st.position.y=st2.position.y=-1.5+sc*1.8;R.render(S,C)})();
+})();
+</script>
+<script>
+/* live floor status */
+(()=>{const live=()=>{const nw=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dhaka'})),d=nw.getDay(),h=nw.getHours()+nw.getMinutes()/60,o=d!==5&&h>=6&&h<23;
+q('#lv').textContent=dg(T(o?(h<14?'Open now: men’s morning session':h<18?'Open now: women’s session until 6 PM':'Open now: men’s evening session until 11 PM'):(d===5||(d===4&&h>=23)?'Closed, reopens Saturday at 6 AM':'Closed, opens at 6 AM')));
+q('#live').classList.toggle('open',o)};live();RL.push(live)})();
+
+/* calculators */
+(()=>{const F=n=>(+n).toLocaleString('en-US'),R=Math.round,tabs=qa('.tabs button'),forms=qa('.calc form'),res=q('#res'),
+K={bmi:f=>{const w=+f.w.value,h=f.h.value/100;if(!(w>0&&h>0))return;const b=w/h/h,c=b<18.5?['Underweight','a','Add calories and lift heavy to build healthy mass.']:b<25?['Normal weight','g','Great health baseline! Join POWER GYM to build lean muscle density and strength.']:b<30?['Overweight','a','Strength training and a calorie plan can shift this steadily.']:['High BMI range','a','Start light with a coach and build up steadily. We will guide you.'];return[b.toFixed(1),c[0],c[1],c[2]]},
+cal:f=>{const w=+f.w.value,h=+f.h.value,a=+f.a.value,g=+f.g.value;if(!(w>0&&h>0&&a>0))return;const k=(10*w+6.25*h-5*a+Number(f.s.value))*f.x.value+g;return[F(R(k/10)*10),'kcal per day','n',(LANG==='bn'?'প্রোটিন লক্ষ্য: '+R(w*(g<0?2:g>0?1.8:1.6))+' গ্রাম প্রতিদিন। এটি একটি আনুমানিক হিসাব, তাই আপনার কোচের সাথে মিলিয়ে নিন।':'Protein target: '+R(w*(g<0?2:g>0?1.8:1.6))+' g per day. This is an estimate, so adjust it with your coach.')]},
+orm:f=>{const w=+f.w.value,r=+f.r.value;if(!(w>0&&r>0))return;const m=r>1?w*(1+r/30):w;return[R(m)+(LANG==='bn'?' কেজি':' kg'),'Estimated one-rep max','n',LANG==='bn'?'ওয়ার্ক সেট ৭০–৮৫%: '+R(m*.7)+'–'+R(m*.85)+' কেজি।':'Work sets at 70–85%: '+R(m*.7)+'–'+R(m*.85)+' kg.']}};
+const run=f=>{const r=K[f.dataset.k](f);if(!r)return;q('#rv').textContent=dg(r[0]);q('#rl').textContent=dg(T(r[1]));q('#rt').textContent=dg(T(r[3]));res.dataset.s=r[2]};
+forms.forEach(f=>{f.oninput=()=>run(f);f.onsubmit=e=>{e.preventDefault();run(f)}});
+tabs.forEach(b=>b.onclick=()=>{tabs.forEach(t=>t.setAttribute('aria-selected',t===b));forms.forEach(f=>{f.hidden=f.dataset.k!==b.dataset.k;f.hidden||run(f)})});
+run(forms[0]);RL.push(()=>{const f=forms.find(x=>!x.hidden);f&&run(f)})})();
+
+/* Power Pass */
+(()=>{const B=qa('#seg button'),P=q('#pass'),W=P.parentNode,F=n=>n.toLocaleString('en-US'),S=(k,v)=>P.style.setProperty(k,v),ids=['pn','pp','dn','pr'].map(i=>q('#'+i));
+function pick(b){B.forEach(x=>x.setAttribute('aria-checked',x===b));const d=b.dataset,p=+d.p,n=+d.n;
+S('--a',d.a);const bn=LANG==='bn';q('#pn').textContent=dg(T(d.d));q('#pp').textContent=dg('৳'+F(p));q('#dn').textContent=bn?dg(T(d.d))+'ের প্রবেশাধিকার':d.d+' of access';q('#pr').textContent=dg('৳'+F(p));
+q('#pf').textContent=bn?dg(T(d.fee)+'।'+(n>1?' প্রতি মাসে প্রায় ৳'+F(Math.round(p/n))+'।':'')):d.fee+'.'+(n>1?' About ৳'+F(Math.round(p/n))+' per month.':'');
+q('#pk').innerHTML=d.k.split('|').map(x=>'<li>'+T(x)+'</li>').join('');
+q('#pcta').setAttribute('data-m', 'Power Pass Membership Plan: '+(n==12?'1 year':n+' month')+' (৳'+F(p)+')');
+q('#pct').textContent=bn?dg(T(d.d))+'ের পাস নিন':'Get the '+d.d+' pass';
+ids.forEach(e=>{e.classList.remove('sw');void e.offsetWidth;e.classList.add('sw')})}
+B.forEach(b=>b.onclick=()=>pick(b));pick(q('#seg [aria-checked=true]'));RL.push(()=>pick(q('#seg [aria-checked=true]')));
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&matchMedia('(hover:hover)').matches){
+W.onpointermove=e=>{const r=W.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;S('--ry',(x-.5)*14+'deg');S('--rx',(.5-y)*14+'deg');S('--mx',x*100+'%');S('--my',y*100+'%')};
+W.onpointerleave=()=>{S('--rx','0deg');S('--ry','0deg');S('--mx','30%');S('--my','20%')}}})();
+</script>
+<script>
+/* Language Switcher */
+(()=>{
+const AT=['aria-label','placeholder','alt','title'],KEY=s=>s.replace(/\s+/g,' ').trim();
+const meta=q('meta[name="description"]'),title0=document.title;
+function translate(){
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;return(!p||p.closest('script,style,svg,[data-dyn],noscript')||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
+  let n;while(n=w.nextNode()){
+    if(n.__o===undefined)n.__o=n.nodeValue;
+    if(LANG==='en'){n.nodeValue=n.__o;continue}
+    const m=n.__o.match(/^(\s*)([\s\S]*?)(\s*)$/),k=KEY(m[2]);
+    n.nodeValue=m[1]+dg(BN[k]!==undefined?BN[k]:m[2])+m[3];
+  }
+  qa('[aria-label],[placeholder],[alt],[title]').forEach(el=>{
+    if(el.closest('[data-dyn]'))return;
+    el.__oa=el.__oa||{};
+    AT.forEach(a=>{if(!el.hasAttribute(a))return;if(el.__oa[a]===undefined)el.__oa[a]=el.getAttribute(a);
+      const o=el.__oa[a];el.setAttribute(a,LANG==='bn'&&BN[o]!==undefined?BN[o]:o)})
+  });
+  document.title=LANG==='bn'&&BN[title0]?BN[title0]:title0;
+}
+function setLang(l){
+  LANG=l==='bn'?'bn':'en';
+  document.documentElement.lang=LANG;
+  translate();RL.forEach(f=>f());
+  qa('.lang-switch button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===LANG));
+  try{localStorage.setItem('pg-lang',LANG)}catch(e){}
+}
+qa('.lang-switch button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+let saved='en';try{saved=localStorage.getItem('pg-lang')||'en'}catch(e){}
+if(saved==='bn')setLang('bn');
+})();
+</script>
+<script>
+/* 3D + premium interactions */
+(()=>{
+const de=document.documentElement,fine=matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches;
+const pb=q('#prog'),sp=()=>{const m=de.scrollHeight-innerHeight;pb.style.transform='scaleX('+(m>0?Math.min(1,scrollY/m):0)+')'};
+addEventListener('scroll',sp,{passive:true});sp();
+if(!fine)return;
+const sl=q('#spot'),h=q('.hero'),sv=(el,k,v)=>el.style.setProperty(k,v);
+addEventListener('pointermove',e=>{sl.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)';
+if(scrollY<innerHeight){sv(h,'--px',(e.clientX/innerWidth-.5).toFixed(3));sv(h,'--py',(e.clientY/innerHeight-.5).toFixed(3))}},{passive:true});
+qa('.card,.why-card,.coach').forEach(c=>{c.classList.add('tilt');
+c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+sv(c,'--ry',((x-.5)*11).toFixed(2)+'deg');sv(c,'--rx',((.5-y)*11).toFixed(2)+'deg');sv(c,'--mx',(x*100).toFixed(1)+'%');sv(c,'--my',(y*100).toFixed(1)+'%')});
+c.addEventListener('pointerleave',()=>{sv(c,'--rx','0deg');sv(c,'--ry','0deg')})});
+qa('.btn,.go').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.16).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.28).toFixed(1)+'px'});b.addEventListener('pointerleave',()=>{b.style.translate=''})});
+})();
+</script>
+<script>document.querySelectorAll('.tc').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}))</script>
+</body>
+</html>
